@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: helvetica;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  padding: 5em;
+  box-sizing: border-box;
+
+  h1 {
+    margin: 1em 0 0 0;
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 1.4em;
+    margin: 0;
+  }
+}
+
+section:nth-of-type(2) {
+  background: #fff;
+  z-index: 5;
+  position: absolute;
+
+  p {
+    color: grey;
+    font-weight: 300;
+    width: 70%;
+  }
+}
+
+.sis1 {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  width: 20%;
+  height: auto;
+  opacity: 0.6;
+  // fill: white;
+}
+.bro1 {
+  position: absolute;
+  // right: 15%;
+  left: 10%;
+  top: 30%;
+  width: 20%;
+  height: auto;
+  opacity: 0.6;
+  // fill: white;
+}
+
+.dad1 {
+  position: absolute;
+  // right: 15%;
+  left: 35%;
+  top: 45%;
+  width: 13%;
+  height: auto;
+  opacity: 0.6;
+}
+
+.mom1 {
+  position: absolute;
+  right: 30%;
+  // left: 20%;
+  top: 20%;
+  width: 15%;
+  height: auto;
+  opacity: 0.6;
+}
+
+.sis2 {
+  position: absolute;
+  top: 70%;
+  // bottom: 4%;
+  left: 50%;
+  z-index: 6;
+  width: 20%;
+  height: auto;
+  opacity: 0.6;
+}
+
+.bro2 {
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  z-index: 6;
+  width: 20%;
+  height: auto;
+  opacity: 0.6;
+}
+
+.dad2 {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  z-index: 6;
+  width: 13%;
+  height: auto;
+  opacity: 0.6;
+}
+
+.mom2 {
+  position: absolute;
+  top: 70%;
+  left: 80%;
+  z-index: 6;
+  width: 15%;
+  height: auto;
+  opacity: 0.6;
+}
+
+.river {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.lake {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
