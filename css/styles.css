@@ -3,17 +3,27 @@ body {
   font-family: helvetica;
 }
 
+canvas {
+  position: fixed !important;
+}
+
+h1,
+h2 {
+  margin: 1em 0 0 0;
+  font-size: 2em;
+  font-weight: normal;
+  color: white;
+  position: relative;
+}
+
 section {
   width: 100%;
   height: 100vh;
   padding: 5em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-section h1 {
-  margin: 1em 0 0 0;
-  font-size: 3em;
+  z-index: 5;
+  position: relative;
 }
 
 section p {
@@ -22,9 +32,7 @@ section p {
 }
 
 section:nth-of-type(2) {
-  background: #fff;
   z-index: 5;
-  position: absolute;
 }
 
 section:nth-of-type(2) p {

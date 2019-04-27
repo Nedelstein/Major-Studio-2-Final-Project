@@ -2,17 +2,25 @@ body {
   margin: 0;
   font-family: helvetica;
 }
+canvas {
+  position: fixed !important;
+}
 
+h1,
+h2 {
+  margin: 1em 0 0 0;
+  font-size: 2em;
+  font-weight: normal;
+  color: white;
+  position: relative;
+}
 section {
   width: 100%;
   height: 100vh;
   padding: 5em;
   box-sizing: border-box;
-
-  h1 {
-    margin: 1em 0 0 0;
-    font-size: 3em;
-  }
+  z-index: 5;
+  position: relative;
 
   p {
     font-size: 1.4em;
@@ -21,9 +29,9 @@ section {
 }
 
 section:nth-of-type(2) {
-  background: #fff;
+  // background: #fff;
   z-index: 5;
-  position: absolute;
+  // position: absolute;
 
   p {
     color: grey;
