@@ -2,9 +2,7 @@
 //   speed: -5
 // });
 
-// document.body.style.cursor = url("images/cursors/canoe.png");
-// $("selector").css({ cursor: "url(images/cursors/canoe.cur), default" });
-
+//cursor change
 $(function() {
   $("body")
     .mousemove(function(e) {
