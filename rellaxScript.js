@@ -1,5 +1,23 @@
-let rellaxBackground = new Rellax(".rellaxBack", {
-  speed: -5
+// let rellaxBackground = new Rellax(".rellaxBack", {
+//   speed: -5
+// });
+
+// document.body.style.cursor = url("images/cursors/canoe.png");
+// $("selector").css({ cursor: "url(images/cursors/canoe.cur), default" });
+
+$(function() {
+  $("body")
+    .mousemove(function(e) {
+      $(".cursor")
+        .show()
+        .css({
+          left: e.clientX,
+          top: e.clientY
+        });
+    })
+    .mouseout(function() {
+      $(".cursor").hide();
+    });
 });
 
 //part 1
@@ -63,7 +81,7 @@ $(document).ready(function() {
       sisAudio1.play();
     },
     function() {
-      $(this).animate({ opacity: 0.6 }, 500);
+      $(this).animate({ opacity: 0.5 }, 500);
       sisAudio1.pause();
     }
   );
@@ -73,7 +91,7 @@ $(document).ready(function() {
       broAudio1.play();
     },
     function() {
-      $(this).animate({ opacity: 0.6 }, 500);
+      $(this).animate({ opacity: 0.5 }, 500);
       broAudio1.pause();
     }
   );
@@ -84,7 +102,7 @@ $(document).ready(function() {
       dadAudio1.play();
     },
     function() {
-      $(this).animate({ opacity: 0.6 }, 500);
+      $(this).animate({ opacity: 0.5 }, 500);
       dadAudio1.pause();
     }
   );
@@ -95,7 +113,7 @@ $(document).ready(function() {
       momAudio1.play();
     },
     function() {
-      $(this).animate({ opacity: 0.6 }, 500);
+      $(this).animate({ opacity: 0.5 }, 500);
       momAudio1.pause();
     }
   );
@@ -107,7 +125,7 @@ $(document).ready(function() {
       sisAudio2.play();
     },
     function() {
-      $(this).animate({ opacity: 0.6 }, 500);
+      $(this).animate({ opacity: 0.5 }, 500);
       sisAudio2.pause();
     }
   );
@@ -117,7 +135,7 @@ $(document).ready(function() {
       broAudio2.play();
     },
     function() {
-      $(this).animate({ opacity: 0.6 }, 500);
+      $(this).animate({ opacity: 0.5 }, 500);
       broAudio2.pause();
     }
   );
@@ -128,7 +146,7 @@ $(document).ready(function() {
       dadAudio2.play();
     },
     function() {
-      $(this).animate({ opacity: 0.6 }, 500);
+      $(this).animate({ opacity: 0.5 }, 500);
       dadAudio2.pause();
     }
   );
@@ -139,7 +157,7 @@ $(document).ready(function() {
       momAudio2.play();
     },
     function() {
-      $(this).animate({ opacity: 0.6 }, 500);
+      $(this).animate({ opacity: 0.5 }, 500);
       momAudio2.pause();
     }
   );

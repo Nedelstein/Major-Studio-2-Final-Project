@@ -9,7 +9,7 @@ function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
   canvas.parent("sketch-holder");
-  background(0);
+  background(25, 55, 63);
   colorMode(HSB, 360);
 }
 
@@ -17,9 +17,12 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 function draw() {
+  push();
+  colorMode(RGB);
   noStroke();
-  fill(0, 50);
+  fill(38, 55, 63, 50);
   rect(0, 0, width, height);
+  pop();
 
   //create and move particles
   for (let i = allParticles.length - 1; i > -1; i--) {
@@ -56,22 +59,25 @@ function draw() {
         continue;
       }
 
-      // Base its hue by the particle's life.
+      // Base its color by the particle's life.
+      // push();
       if (useFill) {
         noStroke();
-        fill(165 + p1.life * 1.5, 360, 360);
+        fill(150 + p1.life * 1.5, 300, 300);
       } else {
         noFill();
-        stroke(165 + p1.life * 1.5, 360, 360);
+        stroke(150 + p1.life * 1.5, 300, 300);
       }
+      // pop();
       triangle(p1.pos.x, p1.pos.y, p2.pos.x, p2.pos.y, p3.pos.x, p3.pos.y);
     }
   }
   allParticles.push(new Particle(mouseX, mouseY, maxLevel));
 }
 
-// function mouseDragged() {
-// }
+function keyPressed() {
+  useFill = !useFill;
+}
 
 function Particle(x, y, level) {
   this.level = level;
