@@ -53,7 +53,7 @@ section:nth-of-type(2) p {
   width: 70%;
 }
 
-.sis1 {
+.sis1 > img {
   position: absolute;
   right: 5%;
   top: 10%;
@@ -62,7 +62,7 @@ section:nth-of-type(2) p {
   opacity: 0.5;
 }
 
-.bro1 {
+.bro1 > img {
   position: absolute;
   left: 10%;
   top: 30%;
@@ -71,7 +71,7 @@ section:nth-of-type(2) p {
   opacity: 0.5;
 }
 
-.dad1 {
+.dad1 > img {
   position: absolute;
   left: 35%;
   top: 45%;
@@ -80,7 +80,7 @@ section:nth-of-type(2) p {
   opacity: 0.5;
 }
 
-.mom1 {
+.mom1 > img {
   position: absolute;
   right: 30%;
   top: 20%;
@@ -89,7 +89,8 @@ section:nth-of-type(2) p {
   opacity: 0.5;
 }
 
-.sis2 {
+.sis2 > img,
+.sis3 > img {
   position: absolute;
   top: 70%;
   left: 50%;
@@ -99,7 +100,8 @@ section:nth-of-type(2) p {
   opacity: 0.5;
 }
 
-.bro2 {
+.bro2 > img,
+.bro3 > img {
   position: absolute;
   top: 70%;
   left: 25%;
@@ -109,7 +111,8 @@ section:nth-of-type(2) p {
   opacity: 0.5;
 }
 
-.dad2 {
+.dad2 > img,
+.dad3 > img {
   position: absolute;
   top: 70%;
   left: 5%;
@@ -119,7 +122,8 @@ section:nth-of-type(2) p {
   opacity: 0.5;
 }
 
-.mom2 {
+.mom2 > img,
+.mom3 > img {
   position: absolute;
   top: 70%;
   left: 80%;

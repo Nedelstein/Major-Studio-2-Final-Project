@@ -1,6 +1,146 @@
-// let rellaxBackground = new Rellax(".rellaxBack", {
-//   speed: -5
-// });
+// "use strict";
+let chapterRequest = new Request("./chapters.json");
+// let audio = new Audio();
+
+let backgroundAudio = new Audio("audio/backgroundNoise.mp3");
+backgroundAudio.volume = 0.3;
+
+// play background audio on start
+$(document).ready(function() {
+  backgroundAudio.play();
+  backgroundAudio.loop = true;
+
+  fetch(chapterRequest)
+    .then(function(resp) {
+      return resp.json();
+    })
+    .then(function(chapterAudio) {
+      console.log(chapterAudio);
+
+      //sister audio chapters
+      let sis_ch1 = new Audio(chapterAudio.marlena.ch1);
+      let sis_ch2 = new Audio(chapterAudio.marlena.ch2);
+
+      //noah audio chapters
+      let bro_ch1 = new Audio(chapterAudio.noah.ch1);
+      let bro_ch2 = new Audio(chapterAudio.noah.ch2);
+
+      //dad audio chapters
+      let dad_ch1 = new Audio(chapterAudio.dad.ch1);
+      let dad_ch2 = new Audio(chapterAudio.dad.ch2);
+
+      //mom audio chapters
+      let mom_ch1 = new Audio(chapterAudio.mom.ch1);
+      let mom_ch2 = new Audio(chapterAudio.mom.ch2);
+
+      $(".sis1").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          sis_ch1.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          sis_ch1.pause();
+        }
+      );
+      $(".bro1").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          bro_ch1.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          bro_ch1.pause();
+        }
+      );
+      $(".dad1").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          dad_ch1.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          dad_ch1.pause();
+        }
+      );
+      $(".mom1").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          mom_ch1.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          mom_ch1.pause();
+        }
+      );
+
+      ///part 2
+      $(".sis2").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          sis_ch2.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          sis_ch2.pause();
+        }
+      );
+      $(".bro2").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          bro_ch2.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          bro_ch2.pause();
+        }
+      );
+
+      $(".dad2").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          dad_ch2.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          dad_ch2.pause();
+        }
+      );
+
+      $(".mom2").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          mom_ch2.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          mom_ch2.pause();
+        }
+      );
+
+      addImage(chapterAudio.dad.img, "dad1");
+      addImage(chapterAudio.noah.img, "bro1");
+      addImage(chapterAudio.marlena.img, "sis1");
+      addImage(chapterAudio.mom.img, "mom1");
+
+      addImage(chapterAudio.dad.img, "dad2");
+      addImage(chapterAudio.noah.img, "bro2");
+      addImage(chapterAudio.marlena.img, "sis2");
+      addImage(chapterAudio.mom.img, "mom2");
+
+      addImage(chapterAudio.dad.img, "dad3");
+      addImage(chapterAudio.noah.img, "bro3");
+      addImage(chapterAudio.marlena.img, "sis3");
+      addImage(chapterAudio.mom.img, "mom3");
+    });
+});
+
+function addImage(imgSource, sect) {
+  let img = document.createElement("img");
+  img.src = imgSource;
+  let chapter = document.getElementsByClassName(sect);
+  $(chapter).append(img);
+}
 
 //cursor change
 $(function() {
@@ -47,118 +187,6 @@ let rellaxMom2 = new Rellax(".rellaxMom2", {
 
 let rellaxDad2 = new Rellax(".rellaxDad2", {
   speed: randScrollSpeed(2)
-});
-
-let backgroundAudio = new Audio("audio/backgroundNoise.mp3");
-backgroundAudio.volume = 0.3;
-
-let momAudio1 = new Audio("audio/mom/mom_1.mp3");
-let dadAudio1 = new Audio("audio/dad/dad_1.mp3");
-let sisAudio1 = new Audio("audio/marlena/marlena_1.mp3");
-let broAudio1 = new Audio("audio/noah/noah_1.mp3");
-
-let momAudio2 = new Audio("audio/mom/mom_2.mp3");
-let dadAudio2 = new Audio("audio/dad/dad_2.mp3");
-let sisAudio2 = new Audio("audio/marlena/marlena_2.mp3");
-let broAudio2 = new Audio("audio/noah/noah_2.mp3");
-
-// let momTrack, sisTrack, dadTrack, broTrack;
-// let momAudio = new Audio(momTrack);
-// let dadAudio = new Audio(dadTrack);
-// let sisAudio = new Audio(sisTrack);
-// let broAudio = new Audio(broTrack);
-
-// on hover no opacity and play/pause audio
-$(document).ready(function() {
-  backgroundAudio.play();
-  backgroundAudio.loop = true;
-
-  $(".sis1").hover(
-    function() {
-      $(this).animate({ opacity: 1.0 }, 500);
-      sisAudio1.play();
-    },
-    function() {
-      $(this).animate({ opacity: 0.5 }, 500);
-      sisAudio1.pause();
-    }
-  );
-  $(".bro1").hover(
-    function() {
-      $(this).animate({ opacity: 1.0 }, 500);
-      broAudio1.play();
-    },
-    function() {
-      $(this).animate({ opacity: 0.5 }, 500);
-      broAudio1.pause();
-    }
-  );
-
-  $(".dad1").hover(
-    function() {
-      $(this).animate({ opacity: 1.0 }, 500);
-      dadAudio1.play();
-    },
-    function() {
-      $(this).animate({ opacity: 0.5 }, 500);
-      dadAudio1.pause();
-    }
-  );
-
-  $(".mom1").hover(
-    function() {
-      $(this).animate({ opacity: 1.0 }, 500);
-      momAudio1.play();
-    },
-    function() {
-      $(this).animate({ opacity: 0.5 }, 500);
-      momAudio1.pause();
-    }
-  );
-
-  ///part 2
-  $(".sis2").hover(
-    function() {
-      $(this).animate({ opacity: 1.0 }, 500);
-      sisAudio2.play();
-    },
-    function() {
-      $(this).animate({ opacity: 0.5 }, 500);
-      sisAudio2.pause();
-    }
-  );
-  $(".bro2").hover(
-    function() {
-      $(this).animate({ opacity: 1.0 }, 500);
-      broAudio2.play();
-    },
-    function() {
-      $(this).animate({ opacity: 0.5 }, 500);
-      broAudio2.pause();
-    }
-  );
-
-  $(".dad2").hover(
-    function() {
-      $(this).animate({ opacity: 1.0 }, 500);
-      dadAudio2.play();
-    },
-    function() {
-      $(this).animate({ opacity: 0.5 }, 500);
-      dadAudio2.pause();
-    }
-  );
-
-  $(".mom2").hover(
-    function() {
-      $(this).animate({ opacity: 1.0 }, 500);
-      momAudio2.play();
-    },
-    function() {
-      $(this).animate({ opacity: 0.5 }, 500);
-      momAudio2.pause();
-    }
-  );
 });
 
 function randScrollSpeed(max) {

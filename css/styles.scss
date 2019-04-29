@@ -52,7 +52,7 @@ section:nth-of-type(2) {
   }
 }
 
-.sis1 {
+.sis1 > img {
   position: absolute;
   right: 5%;
   top: 10%;
@@ -61,7 +61,7 @@ section:nth-of-type(2) {
   opacity: 0.5;
   // fill: white;
 }
-.bro1 {
+.bro1 > img {
   position: absolute;
   // right: 15%;
   left: 10%;
@@ -72,7 +72,7 @@ section:nth-of-type(2) {
   // fill: white;
 }
 
-.dad1 {
+.dad1 > img {
   position: absolute;
   // right: 15%;
   left: 35%;
@@ -82,7 +82,7 @@ section:nth-of-type(2) {
   opacity: 0.5;
 }
 
-.mom1 {
+.mom1 > img {
   position: absolute;
   right: 30%;
   // left: 20%;
@@ -92,7 +92,8 @@ section:nth-of-type(2) {
   opacity: 0.5;
 }
 
-.sis2 {
+.sis2 > img,
+.sis3 > img {
   position: absolute;
   top: 70%;
   // bottom: 4%;
@@ -103,7 +104,8 @@ section:nth-of-type(2) {
   opacity: 0.5;
 }
 
-.bro2 {
+.bro2 > img,
+.bro3 > img {
   position: absolute;
   top: 70%;
   left: 25%;
@@ -113,7 +115,8 @@ section:nth-of-type(2) {
   opacity: 0.5;
 }
 
-.dad2 {
+.dad2 > img,
+.dad3 > img {
   position: absolute;
   top: 70%;
   left: 5%;
@@ -123,7 +126,8 @@ section:nth-of-type(2) {
   opacity: 0.5;
 }
 
-.mom2 {
+.mom2 > img,
+.mom3 > img {
   position: absolute;
   top: 70%;
   left: 80%;
@@ -132,20 +136,3 @@ section:nth-of-type(2) {
   height: auto;
   opacity: 0.5;
 }
-
-// .river {
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   width: 100%;
-//   z-index: 0;
-// }
-
-// .lake {
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100vh;
-//   z-index: 0;
-// }
