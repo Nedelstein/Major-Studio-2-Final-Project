@@ -4,7 +4,7 @@ $(document).ready(function() {
       $(this).animate({ opacity: 1.0 }, 500);
     },
     function() {
-      $(this).animate({ opacity: 0.5 }, 500);
+      $(this).animate({ opacity: 0.6 }, 500);
     }
   );
 
@@ -14,7 +14,7 @@ $(document).ready(function() {
   btn.onclick = function() {
     $(this)
       .parent()
-      .fadeOut(500);
+      .fadeOut(800);
 
     if (modal.opacity <= 0.3) {
       $(".modal").remove();
@@ -23,7 +23,7 @@ $(document).ready(function() {
 
   window.onclick = function(event) {
     if (event.target == modal) {
-      $(".modal").fadeOut(500);
+      $(".modal").fadeOut(800);
     }
     if (modal.opacity <= 0.3) {
       $(".modal").remove();
