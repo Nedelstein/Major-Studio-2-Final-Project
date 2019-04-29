@@ -9,20 +9,17 @@ function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
   canvas.parent("sketch-holder");
-  background(25, 55, 63);
-  colorMode(HSB, 360);
+  colorMode(HSB);
+  background(199.2, 30, 25);
 }
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 function draw() {
-  push();
-  colorMode(RGB);
   noStroke();
-  fill(38, 55, 63, 50);
+  fill(199.2, 30, 25, 20);
   rect(0, 0, width, height);
-  pop();
 
   //create and move particles
   for (let i = allParticles.length - 1; i > -1; i--) {
@@ -39,7 +36,7 @@ function draw() {
         return [pt.pos.x, pt.pos.y];
       })
     );
-    strokeWeight(0.1);
+    strokeWeight(0.3);
 
     for (let i = 0; i < data.length; i += 3) {
       let p1 = allParticles[data[i]];

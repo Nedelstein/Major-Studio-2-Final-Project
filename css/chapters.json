@@ -1,0 +1,34 @@
+{
+  "noah": {
+    "ch1": "audio/noah/noah_1.mp3",
+    "ch2": "audio/noah/noah_2.mp3",
+    "ch3": "audio/noah/noah_3.mp3",
+    "ch4": "audio/noah/noah_4.mp3",
+    "ch5": "audio/noah/noah_5.mp3",
+    "ch6": "audio/noah/noah_6.mp3"
+  },
+  "marlena": {
+    "ch1": "audio/marlena/marlena_1.mp3",
+    "ch2": "audio/marlena/marlena_2.mp3",
+    "ch3": "audio/marlena/marlena_3.mp3",
+    "ch4": "audio/marlena/marlena_4.mp3",
+    "ch5": "audio/marlena/marlena_5.mp3",
+    "ch6": "audio/marlena/marlena_6.mp3"
+  },
+  "dad": {
+    "ch1": "audio/dad/dad_1.mp3",
+    "ch2": "audio/dad/dad_2.mp3",
+    "ch3": "audio/dad/dad_3.mp3",
+    "ch4": "audio/dad/dad_4.mp3",
+    "ch5": "audio/dad/dad_5.mp3",
+    "ch6": "audio/dad/dad_6.mp3"
+  },
+  "mom": {
+    "ch1": "audio/mom/mom_1.mp3",
+    "ch2": "audio/mom/mom_2.mp3",
+    "ch3": "audio/mom/mom_3.mp3",
+    "ch4": "audio/mom/mom_4.mp3",
+    "ch5": "audio/mom/mom_5/mp3",
+    "ch6": "audio/mom/mom_6.mp3"
+  }
+}

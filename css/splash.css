@@ -1,6 +1,7 @@
 .modal {
   display: block;
   position: fixed;
+  margin: 0;
   z-index: 999;
   left: 0;
   right: 0;
@@ -23,7 +24,7 @@
   position: absolute;
   text-align: center;
   font-size: 16px;
-  bottom: 50%;
+  bottom: 40%;
   left: 47%;
 }
 
@@ -34,5 +35,9 @@
   font-weight: bold;
   bottom: 15%;
   left: 50%;
+  margin: 0;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 /*# sourceMappingURL=splash.css.map */
