@@ -20,18 +20,22 @@ $(document).ready(function() {
       //sister audio chapters
       let sis_ch1 = new Audio(chapterAudio.marlena.ch1);
       let sis_ch2 = new Audio(chapterAudio.marlena.ch2);
+      let sis_ch3 = new Audio(chapterAudio.marlena.ch3);
 
       //noah audio chapters
       let bro_ch1 = new Audio(chapterAudio.noah.ch1);
       let bro_ch2 = new Audio(chapterAudio.noah.ch2);
+      let bro_ch3 = new Audio(chapterAudio.noah.ch3);
 
       //dad audio chapters
       let dad_ch1 = new Audio(chapterAudio.dad.ch1);
       let dad_ch2 = new Audio(chapterAudio.dad.ch2);
+      let dad_ch3 = new Audio(chapterAudio.dad.ch3);
 
       //mom audio chapters
       let mom_ch1 = new Audio(chapterAudio.mom.ch1);
       let mom_ch2 = new Audio(chapterAudio.mom.ch2);
+      let mom_ch3 = new Audio(chapterAudio.mom.ch3);
 
       $(".sis1").hover(
         function() {
@@ -118,16 +122,64 @@ $(document).ready(function() {
         }
       );
 
+      //part 3
+      $(".sis3").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          sis_ch3.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          sis_ch3.pause();
+        }
+      );
+      shake(sis_ch3);
+      $(".bro3").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          bro_ch3.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          bro_ch3.pause();
+        }
+      );
+
+      $(".dad3").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          dad_ch3.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          dad_ch3.pause();
+        }
+      );
+
+      $(".mom3").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          mom_ch3.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          mom_ch3.pause();
+        }
+      );
+
+      //part 1 imgs
       addImage(chapterAudio.dad.img, "dad1");
       addImage(chapterAudio.noah.img, "bro1");
       addImage(chapterAudio.marlena.img, "sis1");
       addImage(chapterAudio.mom.img, "mom1");
 
+      //part 2 imgs
       addImage(chapterAudio.dad.img, "dad2");
       addImage(chapterAudio.noah.img, "bro2");
       addImage(chapterAudio.marlena.img, "sis2");
       addImage(chapterAudio.mom.img, "mom2");
 
+      //part 3 imgs
       addImage(chapterAudio.dad.img, "dad3");
       addImage(chapterAudio.noah.img, "bro3");
       addImage(chapterAudio.marlena.img, "sis3");
@@ -140,6 +192,20 @@ function addImage(imgSource, sect) {
   img.src = imgSource;
   let chapter = document.getElementsByClassName(sect);
   $(chapter).append(img);
+}
+
+function shake(audioSource) {
+  let audio = audioSource;
+  audio.addEventListener("timeupdate", vibrate);
+  let timePoint = 87;
+
+  function vibrate() {
+    if (this.currentTime > timePoint) {
+      console.log("working");
+      $(".dad3").effect("shake", { distance: 5 });
+      $(".bro3").effect("shake", { distance: 5 });
+    }
+  }
 }
 
 //cursor change

@@ -61,76 +61,78 @@ section:nth-of-type(2) {
   opacity: 0.5;
   // fill: white;
 }
-.bro1 > img {
-  position: absolute;
-  // right: 15%;
-  left: 10%;
-  top: 30%;
-  width: 15%;
-  height: auto;
-  opacity: 0.5;
-  // fill: white;
-}
+// .bro1 > img {
+//   position: absolute;
+//   // right: 15%;
+//   left: 10%;
+//   top: 30%;
+//   width: 15%;
+//   height: auto;
+//   opacity: 0.5;
+//   // fill: white;
+// }
 
-.dad1 > img {
-  position: absolute;
-  // right: 15%;
-  left: 35%;
-  top: 45%;
-  width: 20%;
-  height: auto;
-  opacity: 0.5;
-}
+// .dad1 > img {
+//   position: absolute;
+//   // right: 15%;
+//   left: 35%;
+//   top: 45%;
+//   width: 20%;
+//   height: auto;
+//   opacity: 0.5;
+// }
 
-.mom1 > img {
-  position: absolute;
-  right: 30%;
-  // left: 20%;
-  top: 20%;
-  width: 20%;
-  height: auto;
-  opacity: 0.5;
-}
+// .mom1 > img {
+//   position: absolute;
+//   right: 30%;
+//   // left: 20%;
+//   top: 20%;
+//   width: 20%;
+//   height: auto;
+//   opacity: 0.5;
+// }
 
+.sis1 > img,
 .sis2 > img,
 .sis3 > img {
   position: absolute;
   top: 70%;
   // bottom: 4%;
-  left: 50%;
+  left: 30%;
   z-index: 6;
   width: 20%;
   height: auto;
   opacity: 0.5;
 }
-
+.bro1 > img,
 .bro2 > img,
 .bro3 > img {
   position: absolute;
   top: 70%;
-  left: 25%;
+  left: 5%;
   z-index: 6;
   width: 15%;
   height: auto;
   opacity: 0.5;
 }
-
+.dad1 > img,
 .dad2 > img,
 .dad3 > img {
   position: absolute;
   top: 70%;
-  left: 5%;
+  left: 60%;
   z-index: 6;
   width: 20%;
   height: auto;
   opacity: 0.5;
 }
 
+.mom1 > img,
 .mom2 > img,
 .mom3 > img {
   position: absolute;
   top: 70%;
-  left: 80%;
+  left: 90%;
   z-index: 6;
   width: 20%;
   height: auto;
