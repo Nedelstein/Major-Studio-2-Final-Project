@@ -165,6 +165,7 @@ $(document).ready(function() {
           mom_ch3.pause();
         }
       );
+      shimmer(bro_ch3);
 
       //part 1 imgs
       addImage(chapterAudio.dad.img, "dad1");
@@ -196,13 +197,41 @@ function addImage(imgSource, sect) {
 function shake(audioSource) {
   let audio = audioSource;
   audio.addEventListener("timeupdate", vibrate);
-  let timePoint = 87;
+  let timeStart = 86;
+  let timeEnd = 89;
 
   function vibrate() {
-    if (this.currentTime > timePoint) {
-      console.log("working");
+    if (this.currentTime > timeStart && this.currentTime < timeEnd) {
       $(".dad3").effect("shake", { distance: 5 });
       $(".bro3").effect("shake", { distance: 5 });
+
+      $("#anxious").toggle({
+        effect: "scale",
+        direction: "horizontal",
+        duration: "300"
+      });
+
+      $("#frantic").toggle({
+        effect: "scale",
+        direction: "horizontal",
+        duration: "300"
+      });
+    }
+  }
+}
+
+function shimmer(audioSource) {
+  let audio = audioSource;
+  audio.addEventListener("timeupdate", shine);
+  let timeStart = 32;
+  let timeEnd = 34;
+
+  function shine() {
+    if (this.currentTime > timeStart && this.currentTime < timeEnd) {
+      $(".bro3").animate({ opacity: 0.1 }, 350);
+      $(".bro3").animate({ opacity: 1 }, 350);
+
+      console.log("working");
     }
   }
 }
@@ -272,6 +301,7 @@ let rellaxDad3 = new Rellax(".rellaxDad3", {
   speed: randScrollSpeed(0.3, 0.6)
 });
 
+//random min/max function
 function randScrollSpeed(min, max) {
   let pace = Math.random() * (max - min) + max;
   return pace;

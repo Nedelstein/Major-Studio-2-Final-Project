@@ -12,7 +12,7 @@ function setup() {
   canvas.position(0, 0);
   canvas.parent("sketch-holder");
   colorMode(HSB);
-  background(199.2, 30, 25);
+  background(199.2, 30, 80);
 
   river = loadImage("images/river1.png");
 }
@@ -22,7 +22,7 @@ function windowResized() {
 }
 function draw() {
   noStroke();
-  fill(199.2, 30, 25, 20);
+  fill(199.2, 30, 80, 20);
   rect(0, 0, width, height);
 
   image(river, width / 9, -10);
@@ -70,8 +70,9 @@ function draw() {
       //   noStroke();
       //   fill(150 + p1.life * 1.5, 300, 300);
       // } else {
+
       noFill();
-      stroke(150 + p1.life * 1.5, 300, 300);
+      stroke(160 + p1.life * 1.5, 100, 200);
       // }
       triangle(p1.pos.x, p1.pos.y, p2.pos.x, p2.pos.y, p3.pos.x, p3.pos.y);
     }
