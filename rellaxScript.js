@@ -1,6 +1,5 @@
 // "use strict";
 let chapterRequest = new Request("./chapters.json");
-// let audio = new Audio();
 
 let backgroundAudio = new Audio("audio/backgroundNoise.mp3");
 backgroundAudio.volume = 0.3;
@@ -224,38 +223,56 @@ $(function() {
     });
 });
 
+//parallax effects
 //part 1
 let rellaxSis = new Rellax(".rellaxSis", {
-  speed: randScrollSpeed(5)
+  speed: randScrollSpeed(2, 3)
 });
 let rellaxBro = new Rellax(".rellaxBro", {
-  speed: randScrollSpeed(5)
+  speed: randScrollSpeed(2, 3)
 });
 let rellaxDad = new Rellax(".rellaxDad", {
-  speed: randScrollSpeed(5)
+  speed: randScrollSpeed(2, 3)
 });
 let rellaxMom = new Rellax(".rellaxMom", {
-  speed: randScrollSpeed(5)
+  speed: randScrollSpeed(2, 3)
 });
 
 //part 2
 let rellaxSis2 = new Rellax(".rellaxSis2", {
-  speed: randScrollSpeed(2)
+  speed: randScrollSpeed(1.1, 2)
 });
 
 let rellaxBro2 = new Rellax(".rellaxBro2", {
-  speed: randScrollSpeed(2)
+  speed: randScrollSpeed(1.1, 2)
 });
 
 let rellaxMom2 = new Rellax(".rellaxMom2", {
-  speed: randScrollSpeed(2)
+  speed: randScrollSpeed(1.1, 2)
 });
 
 let rellaxDad2 = new Rellax(".rellaxDad2", {
-  speed: randScrollSpeed(2)
+  speed: randScrollSpeed(1.1, 2)
 });
 
-function randScrollSpeed(max) {
-  let pace = Math.random() * (max * 2) - max;
+//part 3
+let rellaxSis3 = new Rellax(".rellaxSis3", {
+  speed: randScrollSpeed(0.3, 0.6)
+});
+
+let rellaxBro3 = new Rellax(".rellaxBro3", {
+  speed: randScrollSpeed(0.3, 0.6)
+});
+
+let rellaxMom3 = new Rellax(".rellaxMom3", {
+  speed: randScrollSpeed(0.3, 0.6)
+});
+
+let rellaxDad3 = new Rellax(".rellaxDad3", {
+  speed: randScrollSpeed(0.3, 0.6)
+});
+
+function randScrollSpeed(min, max) {
+  let pace = Math.random() * (max - min) + max;
   return pace;
 }

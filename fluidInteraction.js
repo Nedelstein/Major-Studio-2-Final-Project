@@ -5,12 +5,16 @@ let useFill = false;
 
 let data = [];
 
+let river;
+
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
   canvas.parent("sketch-holder");
   colorMode(HSB);
   background(199.2, 30, 25);
+
+  river = loadImage("images/river1.png");
 }
 
 function windowResized() {
@@ -20,6 +24,11 @@ function draw() {
   noStroke();
   fill(199.2, 30, 25, 20);
   rect(0, 0, width, height);
+
+  image(river, width / 9, -10);
+  image(river, width / 3, -10);
+  image(river, width / 1.65, -10);
+  image(river, width / 1.15, -10);
 
   //create and move particles
   for (let i = allParticles.length - 1; i > -1; i--) {
@@ -57,24 +66,22 @@ function draw() {
       }
 
       // Base its color by the particle's life.
-      // push();
-      if (useFill) {
-        noStroke();
-        fill(150 + p1.life * 1.5, 300, 300);
-      } else {
-        noFill();
-        stroke(150 + p1.life * 1.5, 300, 300);
-      }
-      // pop();
+      // if (useFill) {
+      //   noStroke();
+      //   fill(150 + p1.life * 1.5, 300, 300);
+      // } else {
+      noFill();
+      stroke(150 + p1.life * 1.5, 300, 300);
+      // }
       triangle(p1.pos.x, p1.pos.y, p2.pos.x, p2.pos.y, p3.pos.x, p3.pos.y);
     }
   }
   allParticles.push(new Particle(mouseX, mouseY, maxLevel));
 }
 
-function keyPressed() {
-  useFill = !useFill;
-}
+// function keyPressed() {
+//   useFill = !useFill;
+// }
 
 function Particle(x, y, level) {
   this.level = level;

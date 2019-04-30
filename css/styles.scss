@@ -20,7 +20,8 @@ canvas {
 h1,
 h2,
 h3 {
-  margin: 1em 0 0 0;
+  // margin: 1em 0 0 0;
+  margin: 0;
   font-size: 2em;
   font-weight: normal;
   color: #888888;
@@ -33,64 +34,7 @@ section {
   box-sizing: border-box;
   z-index: 5;
   position: relative;
-
-  p {
-    font-size: 1.4em;
-    margin: 0;
-  }
 }
-
-section:nth-of-type(2) {
-  // background: #fff;
-  z-index: 5;
-  // position: absolute;
-
-  p {
-    color: grey;
-    font-weight: 300;
-    width: 70%;
-  }
-}
-
-.sis1 > img {
-  position: absolute;
-  right: 5%;
-  top: 10%;
-  width: 20%;
-  height: auto;
-  opacity: 0.5;
-  // fill: white;
-}
-// .bro1 > img {
-//   position: absolute;
-//   // right: 15%;
-//   left: 10%;
-//   top: 30%;
-//   width: 15%;
-//   height: auto;
-//   opacity: 0.5;
-//   // fill: white;
-// }
-
-// .dad1 > img {
-//   position: absolute;
-//   // right: 15%;
-//   left: 35%;
-//   top: 45%;
-//   width: 20%;
-//   height: auto;
-//   opacity: 0.5;
-// }
-
-// .mom1 > img {
-//   position: absolute;
-//   right: 30%;
-//   // left: 20%;
-//   top: 20%;
-//   width: 20%;
-//   height: auto;
-//   opacity: 0.5;
-// }
 
 .sis1 > img,
 .sis2 > img,
@@ -104,6 +48,7 @@ section:nth-of-type(2) {
   height: auto;
   opacity: 0.5;
 }
+
 .bro1 > img,
 .bro2 > img,
 .bro3 > img {
@@ -115,6 +60,7 @@ section:nth-of-type(2) {
   height: auto;
   opacity: 0.5;
 }
+
 .dad1 > img,
 .dad2 > img,
 .dad3 > img {
