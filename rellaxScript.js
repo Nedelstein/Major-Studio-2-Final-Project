@@ -4,13 +4,13 @@
 
 let chapterRequest = new Request("./chapters.json");
 
-let backgroundAudio = new Audio("audio/backgroundNoise.mp3");
-backgroundAudio.volume = 0.3;
+// let backgroundAudio = new Audio("audio/backgroundNoise.mp3");
+// backgroundAudio.volume = 0.3;
 
 // play background audio on start
 $(document).ready(function() {
-  backgroundAudio.play();
-  backgroundAudio.loop = true;
+  // backgroundAudio.play();
+  // backgroundAudio.loop = true;
 
   fetch(chapterRequest)
     .then(function(resp) {
@@ -169,7 +169,7 @@ $(document).ready(function() {
           dad_ch3.pause();
         }
       );
-      typeIt(dad_ch3);
+      typeItDie(dad_ch3);
 
       $(".mom3").hover(
         function() {
@@ -363,8 +363,8 @@ function addImage(imgSource, sect) {
 function shake(audioSource) {
   let audio = audioSource;
   audio.addEventListener("timeupdate", vibrate);
-  let timeStart = 86;
-  let timeEnd = 89;
+  let timeStart = 6;
+  let timeEnd = 8;
 
   //86,89
 
@@ -373,29 +373,36 @@ function shake(audioSource) {
       $(".dad3").effect("shake", { distance: 2 });
       $(".bro3").effect("shake", { distance: 2 });
 
-      $("#anxious").toggle({
-        effect: "scale",
-        direction: "horizontal",
-        duration: "300"
-      });
+      $("#anxious")
+        .typeIt({
+          // startDelay: 0,
+          speed: 100,
+          cursor: false
+        })
+        .tiType("Anxious.")
+        .tiPause(2500)
+        .tiDelete(50);
 
-      $("#frantic").toggle({
-        effect: "scale",
-        direction: "horizontal",
-        duration: "300"
-      });
+      $("#frantic")
+        .typeIt({
+          startDelay: 500,
+          speed: 100,
+          cursor: false
+        })
+        .tiType("Frantic.")
+        .tiPause(2500)
+        .tiDelete(50);
     }
   }
 }
 
-function typeIt(audioSource) {
+function typeItDie(audioSource) {
   let audio = audioSource;
   audio.addEventListener("timeupdate", dieType);
 
   //62
   let timeStart = 2;
   let timeEnd = 3;
-
   function dieType() {
     if (this.currentTime > timeStart && this.currentTime < timeEnd) {
       // let dieTxt = new TypeIt("#dieText", options);
@@ -407,8 +414,8 @@ function typeIt(audioSource) {
           cursor: false
         })
         .tiType("I don't want to die.")
-        .tiPause(2000)
-        .tiDelete(20);
+        .tiPause(2500)
+        .tiDelete(50);
     }
   }
 }

@@ -1,3 +1,6 @@
+let backgroundAudio = new Audio("audio/backgroundNoise.mp3");
+backgroundAudio.volume = 0.3;
+
 $(document).ready(function() {
   $("#modal-close").hover(
     function() {
@@ -12,6 +15,8 @@ $(document).ready(function() {
   let btn = document.getElementById("modal-close");
 
   btn.onclick = function() {
+    backgroundAudio.play();
+    backgroundAudio.loop = true;
     $(this)
       .parent()
       .fadeOut(800);
