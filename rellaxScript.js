@@ -1,4 +1,7 @@
 // "use strict";
+
+// import Typed from ".  /typed.js";
+
 let chapterRequest = new Request("./chapters.json");
 
 let backgroundAudio = new Audio("audio/backgroundNoise.mp3");
@@ -154,6 +157,7 @@ $(document).ready(function() {
           dad_ch3.pause();
         }
       );
+      typeIt(dad_ch3);
 
       $(".mom3").hover(
         function() {
@@ -197,8 +201,8 @@ function addImage(imgSource, sect) {
 function shake(audioSource) {
   let audio = audioSource;
   audio.addEventListener("timeupdate", vibrate);
-  let timeStart = 2;
-  let timeEnd = 3;
+  let timeStart = 86;
+  let timeEnd = 89;
 
   //86,89
 
@@ -218,6 +222,31 @@ function shake(audioSource) {
         direction: "horizontal",
         duration: "300"
       });
+    }
+  }
+}
+
+function typeIt(audioSource) {
+  let audio = audioSource;
+  audio.addEventListener("timeupdate", dieType);
+
+  //62
+  let timeStart = 2;
+  let timeEnd = 3;
+
+  function dieType() {
+    if (this.currentTime > timeStart && this.currentTime < timeEnd) {
+      // let dieTxt = new TypeIt("#dieText", options);
+      // dieTxt.go();
+      $("#dieText")
+        .typeIt({
+          speed: 100,
+          deleteSpeed: 50,
+          cursor: false
+        })
+        .tiType("I don't want to die.")
+        .tiPause(2000)
+        .tiDelete(20);
     }
   }
 }
