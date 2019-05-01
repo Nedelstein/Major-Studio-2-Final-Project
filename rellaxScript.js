@@ -307,7 +307,7 @@ $(document).ready(function() {
       $(".mom6").hover(
         function() {
           $(this).animate({ opacity: 1.0 }, 500);
-          mom_ch2.play();
+          mom_ch6.play();
         },
         function() {
           $(this).animate({ opacity: 0.5 }, 500);

@@ -106,6 +106,10 @@ section {
   width: 20%;
   height: auto;
   opacity: 1;
+  transition: all 1s ease-in-out;
+  &:hover {
+    transform: scale(1.5);
+  }
 }
 
 .bro1 > img,
@@ -121,6 +125,10 @@ section {
   width: 15%;
   height: auto;
   opacity: 1;
+  transition: all 1s ease-in-out;
+  &:hover {
+    transform: scale(1.5);
+  }
 }
 
 .dad1 > img,
@@ -136,6 +144,10 @@ section {
   width: 20%;
   height: auto;
   opacity: 1;
+  transition: all 1s ease-in-out;
+  &:hover {
+    transform: scale(1.5);
+  }
 }
 
 .mom1 > img,
@@ -151,6 +163,10 @@ section {
   width: 20%;
   height: auto;
   opacity: 1;
+  transition: all 1s ease-in-out;
+  &:hover {
+    transform: scale(1.5);
+  }
 }
 
 #anxious {

@@ -93,6 +93,18 @@ section {
   width: 20%;
   height: auto;
   opacity: 1;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.sis1 > img:hover,
+.sis2 > img:hover,
+.sis3 > img:hover,
+.sis4 > img:hover,
+.sis5 > img:hover,
+.sis6 > img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .bro1 > img,
@@ -108,6 +120,18 @@ section {
   width: 15%;
   height: auto;
   opacity: 1;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.bro1 > img:hover,
+.bro2 > img:hover,
+.bro3 > img:hover,
+.bro4 > img:hover,
+.bro5 > img:hover,
+.bro6 > img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .dad1 > img,
@@ -123,6 +147,18 @@ section {
   width: 20%;
   height: auto;
   opacity: 1;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.dad1 > img:hover,
+.dad2 > img:hover,
+.dad3 > img:hover,
+.dad4 > img:hover,
+.dad5 > img:hover,
+.dad6 > img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .mom1 > img,
@@ -138,6 +174,18 @@ section {
   width: 20%;
   height: auto;
   opacity: 1;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.mom1 > img:hover,
+.mom2 > img:hover,
+.mom3 > img:hover,
+.mom4 > img:hover,
+.mom5 > img:hover,
+.mom6 > img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 #anxious {
