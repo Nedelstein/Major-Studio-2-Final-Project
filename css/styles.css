@@ -1,5 +1,11 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: helvetica;
   cursor: none;
 }
@@ -18,20 +24,56 @@ canvas {
   z-index: 99999999;
 }
 
+#sidebar {
+  position: fixed;
+  left: 0%;
+  margin: 0;
+  padding: 0;
+  top: 40%;
+}
+
+.sidebars {
+  padding: 10px;
+  font-size: 20px;
+  display: block;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sidebars :hover {
+  color: red;
+}
+
+.banner {
+  display: block;
+  width: 100%;
+  height: 25%;
+  margin-top: 2%;
+  padding: 0 0 0 0;
+  background-color: white;
+}
+
 h1,
 h2,
-h3 {
-  margin: 0;
+h3,
+h4,
+h5,
+h6 {
+  margin-left: 2%;
   font-size: 2em;
   font-weight: normal;
-  color: white;
+  color: black;
   position: relative;
+  top: 40%;
 }
 
 section {
+  max-width: 100vw;
   width: 100%;
   height: 100vh;
-  padding: 5em;
+  margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   z-index: 5;
@@ -43,23 +85,22 @@ section {
 .sis3 > img {
   position: absolute;
   top: 70%;
-  left: 30%;
+  left: 27%;
   z-index: 6;
   width: 20%;
   height: auto;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .bro1 > img,
 .bro2 > img,
 .bro3 > img {
   position: absolute;
-  top: 70%;
   left: 5%;
   z-index: 6;
   width: 15%;
   height: auto;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .dad1 > img,
@@ -67,11 +108,11 @@ section {
 .dad3 > img {
   position: absolute;
   top: 70%;
-  left: 60%;
+  left: 55%;
   z-index: 6;
   width: 20%;
   height: auto;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .mom1 > img,
@@ -79,16 +120,16 @@ section {
 .mom3 > img {
   position: absolute;
   top: 70%;
-  left: 90%;
+  left: 80%;
   z-index: 6;
   width: 20%;
   height: auto;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 #anxious {
   position: absolute;
-  top: 70%;
+  top: 80%;
   left: 12%;
   z-index: 6;
   font-size: 24px;
@@ -98,8 +139,8 @@ section {
 
 #frantic {
   position: absolute;
-  top: 70%;
-  left: 38%;
+  top: 80%;
+  left: 63%;
   z-index: 6;
   font-size: 24px;
   color: white;

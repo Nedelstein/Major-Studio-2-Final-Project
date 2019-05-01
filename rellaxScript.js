@@ -197,13 +197,15 @@ function addImage(imgSource, sect) {
 function shake(audioSource) {
   let audio = audioSource;
   audio.addEventListener("timeupdate", vibrate);
-  let timeStart = 86;
-  let timeEnd = 89;
+  let timeStart = 2;
+  let timeEnd = 3;
+
+  //86,89
 
   function vibrate() {
     if (this.currentTime > timeStart && this.currentTime < timeEnd) {
-      $(".dad3").effect("shake", { distance: 5 });
-      $(".bro3").effect("shake", { distance: 5 });
+      $(".dad3").effect("shake", { distance: 2 });
+      $(".bro3").effect("shake", { distance: 2 });
 
       $("#anxious").toggle({
         effect: "scale",
@@ -253,52 +255,115 @@ $(function() {
 });
 
 //parallax effects
+
+//banners
+let rellaxBanner1 = new Rellax(".banner1", {
+  speed: 5,
+  wrapper: ".part1",
+  relativeToWrapper: true
+});
+
+let rellaxBanner2 = new Rellax(".banner2", {
+  speed: 5,
+  wrapper: ".part2",
+  relativeToWrapper: true
+});
+
+let rellaxBanner3 = new Rellax(".banner3", {
+  speed: 5,
+  wrapper: ".part2",
+  relativeToWrapper: true
+});
+
+let rellaxBanner4 = new Rellax(".banner4", {
+  speed: 5,
+  wrapper: ".part4",
+  relativeToWrapper: true
+});
+
+let rellaxBanner5 = new Rellax(".banner5", {
+  speed: 5,
+  wrapper: ".part5",
+  relativeToWrapper: true
+});
+
+let rellaxBanner6 = new Rellax(".banner6", {
+  speed: 5,
+  wrapper: ".part6",
+  relativeToWrapper: true
+});
+
 //part 1
 let rellaxSis = new Rellax(".rellaxSis", {
-  speed: randScrollSpeed(2, 3)
+  speed: randScrollSpeed(-3, 3),
+  wrapper: ".part1",
+  relativeToWrapper: true
 });
 let rellaxBro = new Rellax(".rellaxBro", {
-  speed: randScrollSpeed(2, 3)
+  speed: randScrollSpeed(-3, 3),
+  wrapper: ".part1",
+  relativeToWrapper: true
 });
 let rellaxDad = new Rellax(".rellaxDad", {
-  speed: randScrollSpeed(2, 3)
+  speed: randScrollSpeed(-3, 3),
+  wrapper: ".part1",
+  relativeToWrapper: true
 });
 let rellaxMom = new Rellax(".rellaxMom", {
-  speed: randScrollSpeed(2, 3)
+  speed: randScrollSpeed(-3, 3),
+  wrapper: ".part1",
+  relativeToWrapper: true
 });
 
 //part 2
 let rellaxSis2 = new Rellax(".rellaxSis2", {
-  speed: randScrollSpeed(1.1, 2)
+  // speed: randScrollSpeed(5, 10),
+  speed: randScrollSpeed(-3, 3),
+  wrapper: ".part2",
+  relativeToWrapper: true
 });
 
 let rellaxBro2 = new Rellax(".rellaxBro2", {
-  speed: randScrollSpeed(1.1, 2)
+  speed: randScrollSpeed(-3, 3),
+  wrapper: ".part2",
+  relativeToWrapper: true
 });
 
 let rellaxMom2 = new Rellax(".rellaxMom2", {
-  speed: randScrollSpeed(1.1, 2)
+  speed: randScrollSpeed(-3, 3),
+  wrapper: ".part2",
+  relativeToWrapper: true
 });
 
 let rellaxDad2 = new Rellax(".rellaxDad2", {
-  speed: randScrollSpeed(1.1, 2)
+  speed: randScrollSpeed(-3, 3),
+  wrapper: ".part2",
+  relativeToWrapper: true
 });
 
 //part 3
 let rellaxSis3 = new Rellax(".rellaxSis3", {
-  speed: randScrollSpeed(0.3, 0.6)
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part3",
+  relativeToWrapper: true
 });
 
 let rellaxBro3 = new Rellax(".rellaxBro3", {
-  speed: randScrollSpeed(0.3, 0.6)
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part3",
+  relativeToWrapper: true
 });
 
 let rellaxMom3 = new Rellax(".rellaxMom3", {
-  speed: randScrollSpeed(0.3, 0.6)
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part3",
+  relativeToWrapper: true
 });
 
 let rellaxDad3 = new Rellax(".rellaxDad3", {
-  speed: randScrollSpeed(0.3, 0.6)
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part3",
+  relativeToWrapper: true
 });
 
 //random min/max function
