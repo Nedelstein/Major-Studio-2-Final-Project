@@ -23,21 +23,33 @@ $(document).ready(function() {
       let sis_ch1 = new Audio(chapterAudio.marlena.ch1);
       let sis_ch2 = new Audio(chapterAudio.marlena.ch2);
       let sis_ch3 = new Audio(chapterAudio.marlena.ch3);
+      let sis_ch4 = new Audio(chapterAudio.marlena.ch4);
+      let sis_ch5 = new Audio(chapterAudio.marlena.ch5);
+      let sis_ch6 = new Audio(chapterAudio.marlena.ch6);
 
       //noah audio chapters
       let bro_ch1 = new Audio(chapterAudio.noah.ch1);
       let bro_ch2 = new Audio(chapterAudio.noah.ch2);
       let bro_ch3 = new Audio(chapterAudio.noah.ch3);
+      let bro_ch4 = new Audio(chapterAudio.noah.ch4);
+      let bro_ch5 = new Audio(chapterAudio.noah.ch5);
+      let bro_ch6 = new Audio(chapterAudio.noah.ch6);
 
       //dad audio chapters
       let dad_ch1 = new Audio(chapterAudio.dad.ch1);
       let dad_ch2 = new Audio(chapterAudio.dad.ch2);
       let dad_ch3 = new Audio(chapterAudio.dad.ch3);
+      let dad_ch4 = new Audio(chapterAudio.dad.ch4);
+      let dad_ch5 = new Audio(chapterAudio.dad.ch5);
+      let dad_ch6 = new Audio(chapterAudio.dad.ch6);
 
       //mom audio chapters
       let mom_ch1 = new Audio(chapterAudio.mom.ch1);
       let mom_ch2 = new Audio(chapterAudio.mom.ch2);
       let mom_ch3 = new Audio(chapterAudio.mom.ch3);
+      let mom_ch4 = new Audio(chapterAudio.mom.ch4);
+      let mom_ch5 = new Audio(chapterAudio.mom.ch5);
+      let mom_ch6 = new Audio(chapterAudio.mom.ch6);
 
       $(".sis1").hover(
         function() {
@@ -171,6 +183,138 @@ $(document).ready(function() {
       );
       shimmer(bro_ch3);
 
+      ///part 4
+      $(".sis4").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          sis_ch4.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          sis_ch4.pause();
+        }
+      );
+      $(".bro4").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          bro_ch4.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          bro_ch4.pause();
+        }
+      );
+
+      $(".dad4").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          dad_ch4.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          dad_ch4.pause();
+        }
+      );
+
+      $(".mom4").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          mom_ch4.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          mom_ch4.pause();
+        }
+      );
+
+      ///part 5
+      $(".sis5").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          sis_ch5.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          sis_ch5.pause();
+        }
+      );
+      $(".bro5").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          bro_ch5.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          bro_ch5.pause();
+        }
+      );
+
+      $(".dad5").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          dad_ch5.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          dad_ch5.pause();
+        }
+      );
+
+      $(".mom5").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          mom_ch5.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          mom_ch5.pause();
+        }
+      );
+
+      ///part 6
+      $(".sis6").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          sis_ch6.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          sis_ch6.pause();
+        }
+      );
+      $(".bro6").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          bro_ch6.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          bro_ch6.pause();
+        }
+      );
+
+      $(".dad6").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          dad_ch6.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          dad_ch6.pause();
+        }
+      );
+
+      $(".mom6").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          mom_ch2.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          mom_ch6.pause();
+        }
+      );
+
       //part 1 imgs
       addImage(chapterAudio.dad.img, "dad1");
       addImage(chapterAudio.noah.img, "bro1");
@@ -188,6 +332,24 @@ $(document).ready(function() {
       addImage(chapterAudio.noah.img, "bro3");
       addImage(chapterAudio.marlena.img, "sis3");
       addImage(chapterAudio.mom.img, "mom3");
+
+      //part 4 imgs
+      addImage(chapterAudio.dad.img, "dad4");
+      addImage(chapterAudio.noah.img, "bro4");
+      addImage(chapterAudio.marlena.img, "sis4");
+      addImage(chapterAudio.mom.img, "mom4");
+
+      //part 5 imgs
+      addImage(chapterAudio.dad.img, "dad5");
+      addImage(chapterAudio.noah.img, "bro5");
+      addImage(chapterAudio.marlena.img, "sis5");
+      addImage(chapterAudio.mom.img, "mom5");
+
+      //part 6 imgs
+      addImage(chapterAudio.dad.img, "dad6");
+      addImage(chapterAudio.noah.img, "bro6");
+      addImage(chapterAudio.marlena.img, "sis6");
+      addImage(chapterAudio.mom.img, "mom6");
     });
 });
 
@@ -300,7 +462,7 @@ let rellaxBanner2 = new Rellax(".banner2", {
 
 let rellaxBanner3 = new Rellax(".banner3", {
   speed: 5,
-  wrapper: ".part2",
+  wrapper: ".part3",
   relativeToWrapper: true
 });
 
@@ -392,6 +554,82 @@ let rellaxMom3 = new Rellax(".rellaxMom3", {
 let rellaxDad3 = new Rellax(".rellaxDad3", {
   speed: randScrollSpeed(2, 5),
   wrapper: ".part3",
+  relativeToWrapper: true
+});
+
+//part 4
+let rellaxSis4 = new Rellax(".rellaxSis4", {
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part4",
+  relativeToWrapper: true
+});
+
+let rellaxBro4 = new Rellax(".rellaxBro4", {
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part4",
+  relativeToWrapper: true
+});
+
+let rellaxMom4 = new Rellax(".rellaxMom4", {
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part4",
+  relativeToWrapper: true
+});
+
+let rellaxDad4 = new Rellax(".rellaxDad4", {
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part4",
+  relativeToWrapper: true
+});
+
+//part 5
+
+let rellaxSis5 = new Rellax(".rellaxSis5", {
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part5",
+  relativeToWrapper: true
+});
+
+let rellaxBro5 = new Rellax(".rellaxBro5", {
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part5",
+  relativeToWrapper: true
+});
+
+let rellaxMom5 = new Rellax(".rellaxMom5", {
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part5",
+  relativeToWrapper: true
+});
+
+let rellaxDad5 = new Rellax(".rellaxDad5", {
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part5",
+  relativeToWrapper: true
+});
+
+//part 6
+let rellaxSis6 = new Rellax(".rellaxSis6", {
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part6",
+  relativeToWrapper: true
+});
+
+let rellaxBro6 = new Rellax(".rellaxBro6", {
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part6",
+  relativeToWrapper: true
+});
+
+let rellaxMom6 = new Rellax(".rellaxMom6", {
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part6",
+  relativeToWrapper: true
+});
+
+let rellaxDad6 = new Rellax(".rellaxDad6", {
+  speed: randScrollSpeed(2, 5),
+  wrapper: ".part6",
   relativeToWrapper: true
 });
 
