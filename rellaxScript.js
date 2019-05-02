@@ -282,6 +282,7 @@ $(document).ready(function() {
           sis_ch6.pause();
         }
       );
+      typeItBroDrawing(sis_ch6);
       $(".bro6").hover(
         function() {
           $(this).animate({ opacity: 1.0 }, 500);
@@ -292,7 +293,7 @@ $(document).ready(function() {
           bro_ch6.pause();
         }
       );
-
+      typeItSisDrawing(bro_ch6);
       $(".dad6").hover(
         function() {
           $(this).animate({ opacity: 1.0 }, 500);
@@ -303,7 +304,7 @@ $(document).ready(function() {
           dad_ch6.pause();
         }
       );
-
+      typeItDadStay(dad_ch6);
       $(".mom6").hover(
         function() {
           $(this).animate({ opacity: 1.0 }, 500);
@@ -423,8 +424,10 @@ function typeItDie(audioSource) {
 function shimmer(audioSource) {
   let audio = audioSource;
   audio.addEventListener("timeupdate", shine);
-  let timeStart = 32;
-  let timeEnd = 34;
+  let timeStart = 4;
+  let timeEnd = 5;
+
+  //32,34
 
   function shine() {
     if (this.currentTime > timeStart && this.currentTime < timeEnd) {
@@ -432,6 +435,73 @@ function shimmer(audioSource) {
       $(".bro3").animate({ opacity: 1 }, 350);
 
       console.log("working");
+    }
+  }
+}
+
+function typeItBroDrawing(audioSource) {
+  let audio = audioSource;
+  audio.addEventListener("timeupdate", broTypeIt);
+
+  //72 start
+  let timeStart = 2;
+  let timeEnd = 4;
+
+  function broTypeIt() {
+    if (this.currentTime > timeStart && this.currentTime < timeEnd) {
+      $("#broDrawing")
+        .typeIt({
+          speed: 100,
+          deleteSpeed: 50,
+          cursor: false
+        })
+        .tiType("My brother drew the picture.")
+        .tiPause(2500)
+        .tiDelete(50);
+    }
+  }
+}
+
+function typeItSisDrawing(audioSource) {
+  let audio = audioSource;
+  audio.addEventListener("timeupdate", sisTypeIt);
+
+  let timeStart = 3;
+  let timeEnd = 4;
+
+  function sisTypeIt() {
+    if (this.currentTime > timeStart && this.currentTime < timeEnd) {
+      $("#sisDrawing")
+        .typeIt({
+          speed: 100,
+          deleteSpeed: 50,
+          cursor: false
+        })
+        .tiType("My sister drew the picture.")
+        .tiPause(2500)
+        .tiDelete(50);
+    }
+  }
+}
+
+function typeItDadStay(audioSource) {
+  let audio = audioSource;
+  audio.addEventListener("timeupdate", dadStay);
+
+  let timeStart = 107;
+  let timeEnd = 108;
+
+  function dadStay() {
+    if (this.currentTime > timeStart && this.currentTime < timeEnd) {
+      $("#dadStay")
+        .typeIt({
+          speed: 100,
+          deleteSpeed: 50,
+          cursor: false
+        })
+        .tiType("Stayed with me for years.")
+        .tiPause(2500)
+        .tiDelete(50);
     }
   }
 }
