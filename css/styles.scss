@@ -56,16 +56,16 @@ canvas {
   color: red;
 }
 
-// .banner {
-//   // min-width: inherit;
-//   // position: fixed;
-//   display: block;
-//   width: 100%;
-//   height: 10%;
-//   margin-top: 2%;
-//   padding: 0 0 0 0;
-//   // background-color: white;
-// }
+.banner {
+  //   // min-width: inherit;
+  //   // position: fixed;
+  // display: block;
+  //   width: 100%;
+  // height: 10%;
+  margin-top: 2%;
+  //   padding: 0 0 0 0;
+  //   // background-color: white;
+}
 
 h1,
 h2,
@@ -79,6 +79,7 @@ h6 {
   color: black;
   position: relative;
   top: 40%;
+  text-shadow: 1px 1px 2px white;
 }
 section {
   max-width: 100vw;
@@ -94,6 +95,7 @@ section {
 .sis1 > img,
 .sis2 > img,
 .sis3 > img,
+// .sis3Feathers > img,
 .sis4 > img,
 .sis5 > img,
 .sis6 > img {
@@ -110,6 +112,24 @@ section {
   &:hover {
     transform: scale(1.5);
   }
+}
+
+.sis3Feathers > img {
+  position: absolute;
+  top: 70%;
+  // bottom: 4%;
+  left: 27%;
+  z-index: 6;
+  height: auto;
+  opacity: 1;
+  width: 30%;
+  height: auto;
+}
+
+.sis3Feathers {
+  // opacity: 0;
+  // z-index: ;
+  display: none;
 }
 
 .bro1 > img,
@@ -148,7 +168,12 @@ section {
   &:hover {
     transform: scale(1.5);
   }
-  // color: red;
+  // color: red;/
+}
+
+.dadNoah {
+  // position: relative;
+  margin-top: 30%;
 }
 
 .mom1 > img,

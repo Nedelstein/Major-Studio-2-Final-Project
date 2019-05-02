@@ -46,6 +46,10 @@ canvas {
   color: red;
 }
 
+.banner {
+  margin-top: 2%;
+}
+
 h1,
 h2,
 h3,
@@ -58,6 +62,7 @@ h6 {
   color: black;
   position: relative;
   top: 40%;
+  text-shadow: 1px 1px 2px white;
 }
 
 section {
@@ -96,6 +101,21 @@ section {
 .sis6 > img:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+}
+
+.sis3Feathers > img {
+  position: absolute;
+  top: 70%;
+  left: 27%;
+  z-index: 6;
+  height: auto;
+  opacity: 1;
+  width: 30%;
+  height: auto;
+}
+
+.sis3Feathers {
+  display: none;
 }
 
 .bro1 > img,
@@ -150,6 +170,10 @@ section {
 .dad6 > img:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+}
+
+.dadNoah {
+  margin-top: 30%;
 }
 
 .mom1 > img,

@@ -10,6 +10,7 @@
   },
   "marlena": {
     "img": "images/peacock.png",
+    "imgColor": "images/peacock_feathers.png",
     "ch1": "audio/marlena/marlena_1.mp3",
     "ch2": "audio/marlena/marlena_2.mp3",
     "ch3": "audio/marlena/marlena_3.mp3",

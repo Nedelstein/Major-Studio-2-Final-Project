@@ -4,14 +4,8 @@
 
 let chapterRequest = new Request("./chapters.json");
 
-// let backgroundAudio = new Audio("audio/backgroundNoise.mp3");
-// backgroundAudio.volume = 0.3;
-
 // play background audio on start
 $(document).ready(function() {
-  // backgroundAudio.play();
-  // backgroundAudio.loop = true;
-
   fetch(chapterRequest)
     .then(function(resp) {
       return resp.json();
@@ -147,6 +141,18 @@ $(document).ready(function() {
           sis_ch3.pause();
         }
       );
+
+      $(".sis3Feathers").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          sis_ch3.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          sis_ch3.pause();
+        }
+      );
+
       shake(sis_ch3);
       $(".bro3").hover(
         function() {
@@ -334,6 +340,8 @@ $(document).ready(function() {
       addImage(chapterAudio.marlena.img, "sis3");
       addImage(chapterAudio.mom.img, "mom3");
 
+      addImage(chapterAudio.marlena.imgColor, "sis3Feathers");
+
       //part 4 imgs
       addImage(chapterAudio.dad.img, "dad4");
       addImage(chapterAudio.noah.img, "bro4");
@@ -373,6 +381,20 @@ function shake(audioSource) {
     if (this.currentTime > timeStart && this.currentTime < timeEnd) {
       $(".dad3").effect("shake", { distance: 2 });
       $(".bro3").effect("shake", { distance: 2 });
+
+      // $(".sis3Feathers").style.width = "150%";
+      // $(".sis3Feathers").style.height = "auto";
+
+      $(".sis3Feathers").fadeIn(2000, function() {
+        $(this)
+          .delay(2000)
+          .fadeOut(2000);
+      });
+      $(".sis3").fadeOut(2000, function() {
+        $(this)
+          .delay(2000)
+          .fadeIn(2000);
+      });
 
       $("#anxious")
         .typeIt({
