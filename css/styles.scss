@@ -44,19 +44,37 @@ canvas {
 }
 
 .sidebars {
-  padding: 10px;
+  padding: 20px 10px 10px 10px;
   // margin-left: 0;
   font-size: 20px;
+  font-weight: bold;
   display: block;
   // cursor: pointer;
-  color: white;
+  color: black;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
 }
-.sidebars-active {
-  color: red;
+.ch1-active,
+.ch2-active,
+.ch3-active,
+.ch4-active,
+.ch5-active,
+.ch6-active {
+  color: white;
 }
+
+// #link-part1 {
+//   padding: 10px;
+//   // margin-left: 0;
+//   font-size: 20px;
+//   display: block;
+//   // cursor: pointer;
+//   color: white;
+//   text-align: center;
+//   text-decoration: none;
+//   font-size: 16px;
+// }
 
 .banner {
   //   // min-width: inherit;

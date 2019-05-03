@@ -51,9 +51,9 @@ $(window).on("resize scroll", function() {
   $("section").each(function() {
     let activeSec = $(this).attr("id");
     if ($(this).isInViewport()) {
-      $("#" + activeSec + "-link").addClass(activeSec + "-active");
+      $("#link-" + activeSec).addClass(activeSec + "-active");
     } else {
-      $(activeSec + "-link").removeClass(activeSec + "-active");
+      $("#link-" + activeSec).removeClass(activeSec + "-active");
     }
   });
 });
