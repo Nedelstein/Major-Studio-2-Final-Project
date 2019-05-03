@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.9.1/rellax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+    <script src="activeState.js"></script>
     <script src="Delaunay.js"></script>
     <script src="modal.js"></script>
     <div id="sketch-holder">
@@ -32,10 +33,7 @@
           hover over the icons with your mouse. When you are done with one, you may scroll down to the next chapter, 
           or listen to another perspective in the same one.<br><br>
 
-          Headphones are recommended.
-
-          <!-- As you listen, pay attention to how perspective works to change the narrative, both factually and emotionally.  -->
-          
+          Headphones are recommended.          
         </p>
         <div id="modal-close"
         button>Enter</button>
@@ -43,16 +41,16 @@
       </div>
     </div>
     <img src="images/cursors/canoe.png" class="cursor" />
-    <!-- <div id="sidebar">
-      <ul>
-        <li><a href="#ch1" class="sidebars">Chapter 1</a></li>
-        <li><a href="#ch2" class="sidebars">Chapter 2</a></li>
-        <li><a href="#ch3" class="sidebars">Chapter 3</a></li>
-        <li><a href="#ch4" class="sidebars">Chapter 4 </a></li>
-        <li><a href="#ch5" class="sidebars">Chapter 5</a></li>
-        <li><a href="#ch6" class="sidebars">Chapter 6</a></li>
-      </ul>
-    </div> -->
+    <div id="sidebar">
+      <nav>
+        <a href="#ch1" id="part1-link" class="sidebars">I</a>
+        <a href="#ch2" id="part2-link" class="sidebars" >II</a>
+        <a href="#ch3" id="part3-link" class="sidebars">III</a>
+        <a href="#ch4" id="part4-link" class="sidebars">IV</a>
+        <a href="#ch5" id="part5-link" class="sidebars" >V</a>
+        <a href="#ch6" id="part6-link" class="sidebars" >VI</a>
+      </nav>
+    </div>
     <section class="part1" id="ch1" name="ch1">
       <div class="banner banner1">
         <h1>Part One</h1>
@@ -129,6 +127,20 @@
       <div id="broDrawing"></div>
       <div id="sisDrawing"></div>
       <div id="dadStay"></div>
+
+    </section>
+    <section class="part7">
+    <div class="conclusions">
+        <p class="modal-text">
+            How does sentiment and emotion play a role in our memory recollection? <br><br>
+            How does memory distort or alter over time with relation to the 
+            emotional attachments that coincide with that memory? <br><br>
+            What does the role of subjectivity play in a shared memory regarding how it is remembered?<br><br>
+        </p>
+        <br><br><br><br>
+        <a button id="finishButton" href="index.html">Click to Replay</button></a>
+      </div>
+      
     </section>
     <script type="module" src="rellaxScript.js"></script>
   </body>

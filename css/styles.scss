@@ -40,6 +40,7 @@ canvas {
   margin: 0;
   padding: 0;
   top: 40%;
+  z-index: 9999;
 }
 
 .sidebars {
@@ -47,12 +48,13 @@ canvas {
   // margin-left: 0;
   font-size: 20px;
   display: block;
-  cursor: pointer;
+  // cursor: pointer;
   color: white;
+  text-align: center;
   text-decoration: none;
   font-size: 16px;
 }
-.sidebars :hover {
+.sidebars-active {
   color: red;
 }
 
@@ -95,7 +97,6 @@ section {
 .sis1 > img,
 .sis2 > img,
 .sis3 > img,
-// .sis3Feathers > img,
 .sis4 > img,
 .sis5 > img,
 .sis6 > img {
@@ -122,8 +123,12 @@ section {
   z-index: 6;
   height: auto;
   opacity: 1;
-  width: 30%;
+  width: 20%;
   height: auto;
+  transition: all 1s ease-in-out;
+  &:hover {
+    transform: scale(1.5);
+  }
 }
 
 .sis3Feathers {
@@ -173,7 +178,7 @@ section {
 
 .dadNoah {
   // position: relative;
-  margin-top: 30%;
+  margin-top: 15%;
 }
 
 .mom1 > img,
@@ -197,8 +202,8 @@ section {
 
 #anxious {
   position: absolute;
-  top: 80%;
-  left: 12%;
+  bottom: 10%;
+  left: 8%;
   z-index: 6;
   font-size: 32px;
   color: white;
@@ -207,8 +212,8 @@ section {
 
 #frantic {
   position: absolute;
-  top: 80%;
-  left: 63%;
+  bottom: 10%;
+  left: 60%;
   z-index: 6;
   font-size: 32px;
   color: white;
@@ -217,13 +222,14 @@ section {
 
 #dieText {
   position: absolute;
-  top: 80%;
-  left: 43%;
+  bottom: 10%;
+  left: 30%;
   text-align: center;
   z-index: 6;
   font-size: 32px;
   font-weight: bold;
   color: black;
+  z-index: 999;
 }
 
 #broDrawing,
@@ -237,4 +243,23 @@ section {
   font-size: 32px;
   font-weight: bold;
   color: white;
+}
+#finishButton {
+  // display: block;
+  // width: 50%;
+  // margin-top: 20px;
+  margin-left: 45%;
+  line-height: 30px;
+  font-weight: bold;
+  padding: 10px;
+  background: salmon;
+  border: none;
+  z-index: 99999;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+
+#finishButton:hover {
+  background: white;
 }

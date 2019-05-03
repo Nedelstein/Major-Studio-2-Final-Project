@@ -2,6 +2,11 @@
 
 // import Typed from ".  /typed.js";
 
+// on refresh scroll to top
+$(window).on("beforeunload", function() {
+  $(window).scrollTop(0);
+});
+
 let chapterRequest = new Request("./chapters.json");
 
 // play background audio on start
@@ -371,9 +376,9 @@ function addImage(imgSource, sect) {
 
 function shake(audioSource) {
   let audio = audioSource;
-  audio.addEventListener("timeupdate", vibrate);
+  audio.addEventListener("timeupdate", vibrate, false);
   let timeStart = 6;
-  let timeEnd = 8;
+  let timeEnd = 6.5;
 
   //86,89
 
@@ -382,18 +387,17 @@ function shake(audioSource) {
       $(".dad3").effect("shake", { distance: 2 });
       $(".bro3").effect("shake", { distance: 2 });
 
-      // $(".sis3Feathers").style.width = "150%";
-      // $(".sis3Feathers").style.height = "auto";
-
-      $(".sis3Feathers").fadeIn(2000, function() {
+      $(".sis3").fadeOut(20, function() {
         $(this)
-          .delay(2000)
-          .fadeOut(2000);
+          .hide()
+          .pause(2000)
+          .fadeIn(1000);
       });
-      $(".sis3").fadeOut(2000, function() {
+
+      $(".sis3Feathers").fadeIn(100, function() {
         $(this)
-          .delay(2000)
-          .fadeIn(2000);
+          .pause(1500)
+          .fadeOut(1000);
       });
 
       $("#anxious")
