@@ -345,7 +345,7 @@ $(document).ready(function() {
       addImage(chapterAudio.marlena.img, "sis3");
       addImage(chapterAudio.mom.img, "mom3");
 
-      addImage(chapterAudio.marlena.imgColor, "sis3Feathers");
+      addImage(chapterAudio.marlena.gif, "sis3Feathers");
 
       //part 4 imgs
       addImage(chapterAudio.dad.img, "dad4");
@@ -364,6 +364,11 @@ $(document).ready(function() {
       addImage(chapterAudio.noah.img, "bro6");
       addImage(chapterAudio.marlena.img, "sis6");
       addImage(chapterAudio.mom.img, "mom6");
+
+      // let broGif = addImage(chapterAudio.noah.gif);
+      // let sisGif = addImage(chapterAudio.marlena.gif);
+      // let momGif = addImage(chapterAudio.mom.gif);
+      // let dadGif = addImage(chapterAudio.dad.gif);
     });
 });
 
@@ -394,11 +399,11 @@ function shake(audioSource) {
           .fadeIn(1000);
       });
 
-      $(".sis3Feathers").fadeIn(100, function() {
-        $(this)
-          .pause(1500)
-          .fadeOut(1000);
-      });
+      $(".sis3Feathers").fadeIn(100);
+      // , function() { $(this);
+      // .pause(1500)
+      // .fadeOut(1000);
+      // });
 
       $("#anxious")
         .typeIt({

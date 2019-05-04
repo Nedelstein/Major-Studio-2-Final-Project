@@ -1,6 +1,7 @@
 {
   "noah": {
     "img": "images/fawn.png",
+    "gif": "images/gifs/noah.gif",
     "ch1": "audio/noah/noah_1.mp3",
     "ch2": "audio/noah/noah_2.mp3",
     "ch3": "audio/noah/noah_3.mp3",
@@ -10,6 +11,7 @@
   },
   "marlena": {
     "img": "images/peacock.png",
+    "gif": "images/gifs/sister.gif",
     "imgColor": "images/peacock_feathers.png",
     "ch1": "audio/marlena/marlena_1.mp3",
     "ch2": "audio/marlena/marlena_2.mp3",
@@ -20,6 +22,7 @@
   },
   "dad": {
     "img": "images/wolf.png",
+    "gif": "images/gifs/father.gif",
     "ch1": "audio/dad/dad_1.mp3",
     "ch2": "audio/dad/dad_2.mp3",
     "ch3": "audio/dad/dad_3.mp3",
@@ -29,6 +32,7 @@
   },
   "mom": {
     "img": "images/owl.png",
+    "gif": "images/gifs/mother.gif",
     "ch1": "audio/mom/mom_1.mp3",
     "ch2": "audio/mom/mom_2.mp3",
     "ch3": "audio/mom/mom_3.mp3",
