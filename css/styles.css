@@ -27,7 +27,6 @@ canvas {
 #sidebar {
   position: fixed;
   left: 0%;
-  margin: 0;
   padding: 0;
   top: 40%;
   z-index: 9999;
@@ -68,8 +67,8 @@ h6 {
   font-weight: normal;
   color: black;
   position: relative;
+  text-align: center;
   top: 40%;
-  text-shadow: 1px 1px 2px white;
 }
 
 section {
@@ -260,12 +259,23 @@ section {
   color: white;
 }
 
+#conclusionText {
+  background-color: rgba(248, 248, 255, 0.8);
+  font-family: courier;
+  position: relative;
+  text-align: center;
+  font-size: 22px;
+  top: 25%;
+  margin: 5%;
+  padding: 15px;
+}
+
 #finishButton {
   margin-left: 45%;
   line-height: 30px;
   font-weight: bold;
   padding: 10px;
-  background: salmon;
+  background: rgba(248, 248, 255, 0.8);
   border: none;
   z-index: 99999;
   color: black;
@@ -275,5 +285,10 @@ section {
 
 #finishButton:hover {
   background: white;
+}
+
+video {
+  z-index: 99999999999;
+  margin-left: 50%;
 }
 /*# sourceMappingURL=styles.css.map */

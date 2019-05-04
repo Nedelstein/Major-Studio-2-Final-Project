@@ -15,12 +15,14 @@ function setup() {
   background(199.2, 30, 80);
 
   river = loadImage("images/river1.png");
+  river.resize(169, 1000);
 }
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 function draw() {
+  river.resize(169, 1120);
   noStroke();
   fill(199.2, 30, 80, 20);
   rect(0, 0, width, height);
