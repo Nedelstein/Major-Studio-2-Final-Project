@@ -46,7 +46,17 @@ canvas {
   text-align: center;
   text-decoration: none;
   font-size: 16px;
+  transition: all 1s ease-in-out;
 }
+// .ch1,
+// .ch2,
+// .ch3,
+// .ch4,
+// .ch5,
+// .ch6 {
+//   transition: all 1s ease-in-out;
+// }
+
 .ch1-active,
 .ch2-active,
 .ch3-active,
@@ -54,6 +64,7 @@ canvas {
 .ch5-active,
 .ch6-active {
   color: white;
+  transition: all 1s ease-in-out;
 }
 
 // #link-part1 {

@@ -41,6 +41,8 @@ canvas {
   text-align: center;
   text-decoration: none;
   font-size: 16px;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .ch1-active,
@@ -50,6 +52,8 @@ canvas {
 .ch5-active,
 .ch6-active {
   color: white;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .banner {
