@@ -147,7 +147,7 @@ $(document).ready(function() {
         }
       );
 
-      $(".sis3Feathers").hover(
+      $(".sis3gif").hover(
         function() {
           $(this).animate({ opacity: 1.0 }, 500);
           sis_ch3.play();
@@ -205,7 +205,19 @@ $(document).ready(function() {
           sis_ch4.pause();
         }
       );
+      addNoahgif(sis_ch4);
       $(".bro4").hover(
+        function() {
+          $(this).animate({ opacity: 1.0 }, 500);
+          bro_ch4.play();
+        },
+        function() {
+          $(this).animate({ opacity: 0.5 }, 500);
+          bro_ch4.pause();
+        }
+      );
+
+      $(".bro4gif").hover(
         function() {
           $(this).animate({ opacity: 1.0 }, 500);
           bro_ch4.play();
@@ -335,40 +347,35 @@ $(document).ready(function() {
 
       //part 2 imgs
       addImage(chapterAudio.dad.img, "dad2");
-      addImage(chapterAudio.noah.img, "bro2");
+      addImage(chapterAudio.noah.gif, "bro2");
       addImage(chapterAudio.marlena.img, "sis2");
       addImage(chapterAudio.mom.img, "mom2");
 
       //part 3 imgs
-      addImage(chapterAudio.dad.img, "dad3");
-      addImage(chapterAudio.noah.img, "bro3");
+      addImage(chapterAudio.dad.gif, "dad3");
+      addImage(chapterAudio.noah.gif, "bro3");
       addImage(chapterAudio.marlena.img, "sis3");
       addImage(chapterAudio.mom.img, "mom3");
 
-      addImage(chapterAudio.marlena.gif, "sis3Feathers");
+      addImage(chapterAudio.marlena.gif, "sis3gif");
 
       //part 4 imgs
-      addImage(chapterAudio.dad.img, "dad4");
-      addImage(chapterAudio.noah.img, "bro4");
-      addImage(chapterAudio.marlena.img, "sis4");
-      addImage(chapterAudio.mom.img, "mom4");
+      addImage(chapterAudio.dad.gif, "dad4");
+      addImage(chapterAudio.noah.gif, "bro4");
+      addImage(chapterAudio.marlena.gif, "sis4");
+      addImage(chapterAudio.mom.gif, "mom4");
 
       //part 5 imgs
-      addImage(chapterAudio.dad.img, "dad5");
-      addImage(chapterAudio.noah.img, "bro5");
-      addImage(chapterAudio.marlena.img, "sis5");
-      addImage(chapterAudio.mom.img, "mom5");
+      addImage(chapterAudio.dad.gif, "dad5");
+      addImage(chapterAudio.noah.gif, "bro5");
+      addImage(chapterAudio.marlena.gif, "sis5");
+      addImage(chapterAudio.mom.gif, "mom5");
 
       //part 6 imgs
-      addImage(chapterAudio.dad.img, "dad6");
-      addImage(chapterAudio.noah.img, "bro6");
-      addImage(chapterAudio.marlena.img, "sis6");
-      addImage(chapterAudio.mom.img, "mom6");
-
-      // let broGif = addImage(chapterAudio.noah.gif);
-      // let sisGif = addImage(chapterAudio.marlena.gif);
-      // let momGif = addImage(chapterAudio.mom.gif);
-      // let dadGif = addImage(chapterAudio.dad.gif);
+      addImage(chapterAudio.dad.gif, "dad6");
+      addImage(chapterAudio.noah.gif, "bro6");
+      addImage(chapterAudio.marlena.gif, "sis6");
+      addImage(chapterAudio.mom.gif, "mom6");
     });
 });
 
@@ -393,13 +400,12 @@ function shake(audioSource) {
       $(".bro3").effect("shake", { distance: 2 });
 
       $(".sis3").fadeOut(20, function() {
-        $(this)
-          .hide()
-          .pause(2000)
-          .fadeIn(1000);
+        $(this).hide();
+        // .pause(2000)
+        // .fadeIn(1000);
       });
 
-      $(".sis3Feathers").fadeIn(100);
+      $(".sis3gif").fadeIn(100);
       // , function() { $(this);
       // .pause(1500)
       // .fadeOut(1000);
@@ -537,6 +543,23 @@ function typeItDadStay(audioSource) {
   }
 }
 
+function addNoahgif(audioSource) {
+  let audio = audioSource;
+  audio.addEventListener("timeupdate", noahGif, false);
+
+  let timeStart = 1;
+  let timeEnd = 2;
+  function noahGif() {
+    if (this.currentTime > timeStart && this.currentTime < timeEnd) {
+      $(".bro4").fadeOut(20, function() {
+        $(this).hide();
+        // .pause(2000)
+        // .fadeIn(1000);
+      });
+      $(".bro4gif").fadeIn(100);
+    }
+  }
+}
 //cursor change
 $(function() {
   $("body")

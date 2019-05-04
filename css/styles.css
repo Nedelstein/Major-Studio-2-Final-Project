@@ -109,7 +109,7 @@ section {
           transform: scale(1.5);
 }
 
-.sis3Feathers > img {
+.sis3gif > img {
   position: absolute;
   top: 70%;
   left: 27%;
@@ -122,21 +122,16 @@ section {
   transition: all 1s ease-in-out;
 }
 
-.sis3Feathers > img:hover {
+.sis3gif > img:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
 
-.sis3Feathers {
+.sis3gif {
   display: none;
 }
 
-.bro1 > img,
-.bro2 > img,
-.bro3 > img,
-.bro4 > img,
-.bro5 > img,
-.bro6 > img {
+.bro1 > img {
   position: absolute;
   top: 70%;
   left: 5%;
@@ -148,7 +143,27 @@ section {
   transition: all 1s ease-in-out;
 }
 
-.bro1 > img:hover,
+.bro1 > img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.bro2 > img,
+.bro3 > img,
+.bro4 > img,
+.bro5 > img,
+.bro6 > img {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  width: 25%;
+  height: auto;
+  z-index: 6;
+  opacity: 1;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
 .bro2 > img:hover,
 .bro3 > img:hover,
 .bro4 > img:hover,
@@ -156,6 +171,10 @@ section {
 .bro6 > img:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+}
+
+.bro4gif {
+  display: none;
 }
 
 .dad1 > img,

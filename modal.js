@@ -21,22 +21,8 @@ $(document).ready(function() {
       .parent()
       .fadeOut(800);
 
-    // if (btn.opacity <= 0.3) {
-    //   // $(".modal").remove();
-    //   document.getElementById("modal-splash").style.display = "none";
-    // }
-
     setTimeout(function() {
       document.getElementById("modal-splash").style.display = "none";
     }, 800);
   };
-
-  // window.onclick = function(event) {
-  //   if (event.target == modal) {
-  //     $(".modal").fadeOut(800);
-  //   }
-  //   if (modal.opacity <= 0.3) {
-  //     $(".modal").remove();
-  //   }
-  // };
 });

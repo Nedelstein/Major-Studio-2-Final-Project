@@ -126,7 +126,7 @@ section {
   }
 }
 
-.sis3Feathers > img {
+.sis3gif > img {
   position: absolute;
   top: 70%;
   // bottom: 4%;
@@ -142,18 +142,13 @@ section {
   }
 }
 
-.sis3Feathers {
+.sis3gif {
   // opacity: 0;
   // z-index: ;
   display: none;
 }
 
-.bro1 > img,
-.bro2 > img,
-.bro3 > img,
-.bro4 > img,
-.bro5 > img,
-.bro6 > img {
+.bro1 > img {
   position: absolute;
   top: 70%;
   left: 5%;
@@ -165,6 +160,27 @@ section {
   &:hover {
     transform: scale(1.5);
   }
+}
+
+.bro2 > img,
+.bro3 > img,
+.bro4 > img,
+.bro5 > img,
+.bro6 > img {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  width: 25%;
+  height: auto;
+  z-index: 6;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+.bro4gif {
+  display: none;
 }
 
 .dad1 > img,
