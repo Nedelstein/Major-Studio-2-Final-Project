@@ -1,0 +1,51 @@
+.modal {
+  display: block;
+  position: fixed;
+  margin: 0;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  cursor: none;
+}
+
+.modal-content {
+  background-color: rgba(248, 248, 255, 0.95);
+  margin: 5% auto;
+  padding: 10px;
+  border: 1px solid black;
+  width: 90%;
+  height: 90%;
+}
+
+.modal-text {
+  font-family: courier;
+  position: relative;
+  text-align: center;
+  font-size: 22px;
+  top: 15%;
+  margin: 5%;
+  padding: 15px;
+}
+
+#modal-close {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: #87cefa;
+  border: 1px solid cyan;
+  font-size: 28px;
+  left: 47%;
+  bottom: 25%;
+  padding: 5px;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  z-index: 10;
+}
+
+#modal-close:hover {
+  background-color: white;
+}
+/*# sourceMappingURL=splash.css.map */

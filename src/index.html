@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.9.1/rellax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+    <!-- <script src="activeState.js"></script>
+    <script src="Delaunay.js"></script>
+    <script src="modal.js"></script> -->
+    <script src="js/scripts.js"></script>
+    <div id="sketch-holder">
+      <!-- <script src="fluidInteraction.js"></script> -->
+      
+    </div>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/splash.css" />
+
+    <title>The Boat</title>
+  </head>
+  <body>
+    <div id="modal-splash" class="modal">
+      <div class="modal-content">
+        <p class="modal-text">
+          This is an interactive audio/visual story about a true incident. It is retold by the four different
+          people who experienced the event.<br /><br/>
+
+          The story is separated into six chapters. To listen, 
+          hover over the icons with your mouse. When you are done with one, you may scroll down to the next chapter, 
+          or listen to another perspective in the same one.<br><br><br><br><br><br>
+          Headphones are recommended.          
+        </p>
+        <div id="modal-close"
+        button>Enter</button>
+        </div>
+      </div>
+    </div>
+    <img src="images/cursors/canoe.png" class="cursor" />
+    <div id="sidebar">
+      <nav>
+        <a href="#ch1" id="link-ch1" class="sidebars">I</a>
+        <a href="#ch2" id="link-ch2" class="sidebars" >II</a>
+        <a href="#ch3" id="link-ch3" class="sidebars">III</a>
+        <a href="#ch4" id="link-ch4" class="sidebars">IV</a>
+        <a href="#ch5" id="link-ch5" class="sidebars" >V</a>
+        <a href="#ch6" id="link-ch6" class="sidebars" >VI</a>
+      </nav>
+    </div>
+    <section class="part1" id="ch1" name="ch1">
+      <div class="banner banner1">
+        <h1>Preamble</h1>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <div class="sis1 rellaxSis"></div>
+      <div class="mom1 rellaxMom"></div>
+      <div class="bro1 rellaxBro"></div>
+      <div class="dad1 rellaxDad"></div>
+    </section>
+    <br /><br />
+    <section class="part2" id="ch2" name="ch2">
+      <div class="banner banner2">
+        <h2>Into the Water</h2>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> 
+      <div class="sis2 rellaxSis2"></div>
+      <div class="mom2 rellaxMom2"></div>
+      <div class="dadNoah"></div>
+      <div class="bro2 rellaxBro2"></div>
+      <div class="dad2 rellaxDad2"></div>
+    </div>
+    </section>
+    <br /><br />
+    <section class="part3" id="ch3">
+      <div class="banner banner3">
+        <h3>The Flip</h3>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <div class="sis3gif rellaxSis3"></div>
+      <div class="sis3 rellaxSis3"></div>
+      <div class="mom3 rellaxMom3"></div>
+      <div class="dadNoah">
+          <div class="bro3 rellaxBro3"></div>
+          <div class="dad3 rellaxDad3"></div>
+        </div>
+      <div id="anxious"></div>
+      <div id="frantic"></div>
+      <div id="dieText"></div>
+    </section>
+    <br /><br />
+    <section class="part4" id="ch4">
+      <div class="banner banner4">
+        <h4>The Rescue</h4>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <div class="sis4 rellaxSis4"></div>
+      <div class="bro4 rellaxBro4"></div>
+      <div class="dad4 rellaxDad4"></div>
+      <div class="mom4 rellaxMom4"></div>
+    </section>
+    <br /><br />
+    <section class="part5" id="ch5">
+      <div class="banner banner5">
+        <h4>The Return</h4>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <div class="sis5 rellaxSis5"></div>
+      <div class="bro5 rellaxBro5"></div>
+      <div class="dad5 rellaxDad5"></div>
+      <div class="mom5 rellaxMom5"></div>
+    </section>
+    <br /><br />
+    <section class="part6" id="ch6">
+      <div class="banner banner6">
+        <h4>Reflection</h4>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <div class="sis6 rellaxSis6"></div>
+      <div class="bro6 rellaxBro6"></div>
+      <div class="dad6 rellaxDad6"></div>
+      <div class="mom6 rellaxMom6"></div>
+      <div id="broDrawing"></div>
+      <div id="sisDrawing"></div>
+      <div id="dadStay"></div>
+
+    </section>
+    <section class="part7">
+    <div class="conclusions">
+        <p id="conclusionText">
+<br><br>
+          Thank you for listening.
+          <br><br><br><br>
+            How does sentiment and emotion play a role in our memory recollection? <br><br>
+            How does memory distort or alter over time with relation to the 
+            emotional attachments that coincide with that memory? <br><br>
+            What does the role of subjectivity play in a shared memory regarding how it is remembered?<br><br><br><br>
+        </p>
+        <br><br><br><br>
+        <a button id="finishButton" href="index.html">Replay the Experience</button></a>
+      </div>
+    </section>
+
+    <!-- <script type="module" src="rellaxScript.js"></script> -->
+  </body>
+</html>
