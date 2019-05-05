@@ -46,6 +46,7 @@ gulp.task("lint", function() {
     .pipe(jshint.reporter("default"));
 });
 
+//minify and concat js
 gulp.task("scripts", function() {
   gulp
     .src("./src/js/*.js")
@@ -69,6 +70,8 @@ gulp.task("imageMin", function() {
     .pipe(gulp.dest("dist/images"));
 });
 
-gulp.task("default", function() {
+gulp.task("watch", function() {
+  gulp.watch("./src/*.html", ["copyHtml"]);
   gulp.watch("./src/js/*.js", ["lint", "scripts"]);
+  gulp.watch("./src/images*", ["imageMin"]);
 });
