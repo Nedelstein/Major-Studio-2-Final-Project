@@ -86,6 +86,10 @@ section {
   position: relative;
 }
 
+.icons {
+  margin-top: 100px;
+}
+
 .sis1 > img,
 .sis2 > img,
 .sis3 > img,
@@ -294,7 +298,7 @@ section {
 }
 
 #finishButton {
-  margin-left: 45%;
+  margin-left: 42%;
   line-height: 30px;
   font-weight: bold;
   padding: 10px;

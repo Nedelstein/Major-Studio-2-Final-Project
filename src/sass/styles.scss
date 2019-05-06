@@ -48,14 +48,6 @@ canvas {
   font-size: 16px;
   transition: all 1s ease-in-out;
 }
-// .ch1,
-// .ch2,
-// .ch3,
-// .ch4,
-// .ch5,
-// .ch6 {
-//   transition: all 1s ease-in-out;
-// }
 
 .ch1-active,
 .ch2-active,
@@ -80,14 +72,7 @@ canvas {
 // }
 
 .banner {
-  //   // min-width: inherit;
-  //   // position: fixed;
-  // display: block;
-  //   width: 100%;
-  // height: 10%;
   margin-top: 2%;
-  //   padding: 0 0 0 0;
-  //   // background-color: white;
 }
 
 h1,
@@ -109,11 +94,14 @@ section {
   max-width: 100vw;
   width: 100%;
   height: 100vh;
-  // padding: 5em;
   margin: 0;
   box-sizing: border-box;
   z-index: 5;
   position: relative;
+}
+
+.icons {
+  margin-top: 100px;
 }
 
 .sis1 > img,
@@ -298,7 +286,7 @@ section {
   // display: block;
   // width: 50%;
   // margin-top: 20px;
-  margin-left: 45%;
+  margin-left: 42%;
   line-height: 30px;
   font-weight: bold;
   padding: 10px;

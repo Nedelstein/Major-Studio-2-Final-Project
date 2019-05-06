@@ -81,9 +81,13 @@ section {
   height: 100vh;
   margin: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   z-index: 5;
   position: relative;
+}
+
+.icons {
+  margin-top: 100px;
 }
 
 .sis1 > img,
@@ -110,7 +114,7 @@ section {
 .sis5 > img:hover,
 .sis6 > img:hover {
   -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .sis3gif > img {
@@ -128,7 +132,7 @@ section {
 
 .sis3gif > img:hover {
   -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .sis3gif {
@@ -149,7 +153,7 @@ section {
 
 .bro1 > img:hover {
   -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .bro2 > img,
@@ -174,7 +178,7 @@ section {
 .bro5 > img:hover,
 .bro6 > img:hover {
   -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .bro4gif {
@@ -205,7 +209,7 @@ section {
 .dad5 > img:hover,
 .dad6 > img:hover {
   -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .dadNoah {
@@ -236,7 +240,7 @@ section {
 .mom5 > img:hover,
 .mom6 > img:hover {
   -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 #anxious {
@@ -294,7 +298,7 @@ section {
 }
 
 #finishButton {
-  margin-left: 45%;
+  margin-left: 42%;
   line-height: 30px;
   font-weight: bold;
   padding: 10px;
