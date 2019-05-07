@@ -421,19 +421,16 @@ $(document).ready(function() {
   };
 });
 
-// "use strict";
-
-// import Typed from ".  /typed.js";
-
 // on refresh scroll to top
 $(window).on("beforeunload", function() {
   $(window).scrollTop(0);
 });
 
-let chapterRequest = new Request("./chapters.json");
+// let chapterRequest = new Request("./chapters.json");
 
 // play background audio on start
 $(document).ready(function() {
+  let chapterRequest = new Request("./chapters.json");
   fetch(chapterRequest)
     .then(function(resp) {
       return resp.json();
@@ -980,7 +977,7 @@ $(function() {
     });
 });
 
-//parallax effects
+///////parallax effects//////////
 
 //banners
 let rellaxBanner1 = new Rellax(".banner1", {
