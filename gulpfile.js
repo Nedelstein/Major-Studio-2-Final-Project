@@ -1,7 +1,7 @@
 "use strict";
 
 const gulp = require("gulp");
-// const sass = require("gulp-sass");
+const sass = require("gulp-sass");
 const cssnano = require("gulp-cssnano");
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
@@ -13,6 +13,7 @@ const rename = require("gulp-rename");
 
 const imagemin = require("gulp-imagemin");
 
+//sass to css
 gulp.task("sassworkflow", function() {
   gulp
     .src("./src/sass/*.scss")
@@ -26,12 +27,7 @@ gulp.task("sassworkflow", function() {
       })
     )
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest("./dist/css"))
-    .pipe(
-      browserSync.reload({
-        stream: true
-      })
-    );
+    .pipe(gulp.dest("./dist/CSS"));
 });
 
 //test
@@ -62,7 +58,7 @@ gulp.task("copyHtml", function() {
   gulp.src("src/*.html").pipe(gulp.dest("dist"));
 });
 
-//optimize images
+//minify images
 gulp.task("imageMin", function() {
   gulp
     .src("src/images/*")
@@ -73,5 +69,6 @@ gulp.task("imageMin", function() {
 gulp.task("watch", function() {
   gulp.watch("./src/*.html", ["copyHtml"]);
   gulp.watch("./src/js/*.js", ["lint", "scripts"]);
+  gulp.watch("./src/sass/**/*.scss", ["sassworkflow"]);
   gulp.watch("./src/images*", ["imageMin"]);
 });

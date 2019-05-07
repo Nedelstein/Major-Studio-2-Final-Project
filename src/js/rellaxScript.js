@@ -399,19 +399,7 @@ function shake(audioSource) {
       $(".bro3").effect("shake", { distance: 2 });
 
       $(".sis3").fadeOut(20);
-      // function() {
-      // $(this);
-      // .hide()
-      // .pause(2000)
-      // .fadeIn(1000);
-      // });
-
       $(".sis3gif").fadeIn(100);
-      //  function() {
-      // $(this)
-      // .pause(1500)
-      // .fadeOut(1000);
-      // });
 
       $("#anxious")
         .typeIt({
@@ -440,7 +428,6 @@ function typeItDie(audioSource) {
   let audio = audioSource;
   audio.addEventListener("timeupdate", dieType);
 
-  //62
   let timeStart = 62;
   let timeEnd = 63;
   function dieType() {
@@ -463,8 +450,6 @@ function shimmer(audioSource) {
   audio.addEventListener("timeupdate", shine);
   let timeStart = 32;
   let timeEnd = 33;
-
-  //32,34
 
   function shine() {
     if (this.currentTime > timeStart && this.currentTime < timeEnd) {
@@ -550,13 +535,12 @@ function addNoahgif(audioSource) {
     if (this.currentTime > timeStart && this.currentTime < timeEnd) {
       $(".bro4").fadeOut(20, function() {
         $(this).hide();
-        // .pause(2000)
-        // .fadeIn(1000);
       });
       $(".bro4gif").fadeIn(100);
     }
   }
 }
+
 //cursor change
 $(function() {
   $("body")
