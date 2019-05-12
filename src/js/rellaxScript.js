@@ -1,3 +1,9 @@
+// const $ = require("jquery");
+// require("jquery-ui");
+
+// const Rellax = require("rellax");
+// require("typeit");
+
 // on refresh scroll to top
 $(window).on("beforeunload", function() {
   $(window).scrollTop(0);

@@ -1,3 +1,6 @@
+// const $ = require("jquery");
+// require("jquery-ui");
+
 $.fn.isInViewport = function() {
   let elementTop = $(this).offset().top;
   let elementBottom = elementTop + $(this).outerHeight();

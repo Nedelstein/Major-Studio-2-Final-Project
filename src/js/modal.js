@@ -1,3 +1,6 @@
+// const $ = require("jquery");
+// require("jquery-ui");
+
 let backgroundAudio = new Audio("audio/backgroundNoise.mp3");
 backgroundAudio.volume = 0.3;
 

@@ -5,15 +5,15 @@ Orginally from https://cdn.rawgit.com/ironwallaby/delaunay/master/delaunay.js
 Tweaked it so instead of raising an error it would return an empty list.
 */
 
-var Delaunay;
+let Delaunay;
 
 (function() {
   "use strict";
 
-  var EPSILON = 1.0 / 1048576.0;
+  let EPSILON = 1.0 / 1048576.0;
 
   function supertriangle(vertices) {
-    var xmin = Number.POSITIVE_INFINITY,
+    let xmin = Number.POSITIVE_INFINITY,
       ymin = Number.POSITIVE_INFINITY,
       xmax = Number.NEGATIVE_INFINITY,
       ymax = Number.NEGATIVE_INFINITY,
@@ -45,7 +45,7 @@ var Delaunay;
   }
 
   function circumcircle(vertices, i, j, k) {
-    var x1 = vertices[i][0],
+    let x1 = vertices[i][0],
       y1 = vertices[i][1],
       x2 = vertices[j][0],
       y2 = vertices[j][1],
@@ -97,7 +97,7 @@ var Delaunay;
   }
 
   function dedup(edges) {
-    var i, j, a, b, m, n;
+    let i, j, a, b, m, n;
 
     for (j = edges.length; j; ) {
       b = edges[--j];
@@ -118,7 +118,7 @@ var Delaunay;
 
   Delaunay = {
     triangulate: function(vertices, key) {
-      var n = vertices.length,
+      let n = vertices.length,
         i,
         j,
         indices,
@@ -161,7 +161,7 @@ var Delaunay;
       /* Initialize the open list (containing the supertriangle and nothing
        * else) and the closed list (which is empty since we havn't processed
        * any triangles yet). */
-      var circCircle = circumcircle(vertices, n + 0, n + 1, n + 2);
+      let circCircle = circumcircle(vertices, n + 0, n + 1, n + 2);
       if (circCircle == undefined) return [];
 
       open = [circumcircle(vertices, n + 0, n + 1, n + 2)];
@@ -236,7 +236,7 @@ var Delaunay;
       )
         return null;
 
-      var a = tri[1][0] - tri[0][0],
+      let a = tri[1][0] - tri[0][0],
         b = tri[2][0] - tri[0][0],
         c = tri[1][1] - tri[0][1],
         d = tri[2][1] - tri[0][1],
@@ -245,7 +245,7 @@ var Delaunay;
       /* Degenerate tri. */
       if (i === 0.0) return null;
 
-      var u = (d * (p[0] - tri[0][0]) - b * (p[1] - tri[0][1])) / i,
+      let u = (d * (p[0] - tri[0][0]) - b * (p[1] - tri[0][1])) / i,
         v = (a * (p[1] - tri[0][1]) - c * (p[0] - tri[0][0])) / i;
 
       /* If we're outside the tri, fail. */

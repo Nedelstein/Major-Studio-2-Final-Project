@@ -10,12 +10,13 @@ const jshint = require("gulp-jshint");
 const concat = require("gulp-concat");
 const terser = require("gulp-terser");
 const rename = require("gulp-rename");
+// const babel = require("gulp-babel");
 
 const imagemin = require("gulp-imagemin");
 
 //sass to css
 gulp.task("sassworkflow", function() {
-  gulp
+  return gulp
     .src("./src/sass/*.scss")
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
@@ -36,7 +37,7 @@ gulp.task("message", function() {
 });
 
 gulp.task("lint", function() {
-  gulp
+  return gulp
     .src("src/js/*.js")
     .pipe(jshint())
     .pipe(jshint.reporter("default"));
@@ -44,7 +45,7 @@ gulp.task("lint", function() {
 
 //minify and concat js
 gulp.task("scripts", function() {
-  gulp
+  return gulp
     .src("./src/js/*.js")
     .pipe(concat("scripts.js"))
     .pipe(gulp.dest("./dist/js"))
@@ -55,12 +56,12 @@ gulp.task("scripts", function() {
 
 //copy html files
 gulp.task("copyHtml", function() {
-  gulp.src("src/*.html").pipe(gulp.dest("dist"));
+  return gulp.src("src/*.html").pipe(gulp.dest("dist"));
 });
 
 //minify images
 gulp.task("imageMin", function() {
-  gulp
+  return gulp
     .src("src/images/*")
     .pipe(imagemin())
     .pipe(gulp.dest("dist/images"));
